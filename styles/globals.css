@@ -1,0 +1,30 @@
+/* styles/globals.css */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .light-mode {
+    background-color: #b5daff; /* Baby blue */
+    color: #000000;
+  }
+  
+  .dark-mode {
+    background-color: #0a2239; /* Dark blue */
+    color: #e0e0e0;
+  }
+  
+  .header-text {
+    font-family: "Poppins", sans-serif; /* Ensure the Poppins font is applied */
+  }
+  
+  .bread {
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Vertically centers */
+    align-items: center; /* Horizontally centers */
+    height: 80vh; /* Make sure the parent has a height */
+  }
+
+  p {
+    font-family: "Poppins", sans-serif; /* Ensure the Poppins font is applied */
+  }
