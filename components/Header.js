@@ -1,14 +1,20 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 export default function Header({ children }) {
   return (
     <header className="win95-header">
       <div className="left-section">
-        <a href="#" className="freya-btn">Freya Fuglø</a>
+        <a href="#" className="freya-btn">
+          Freya Fuglø
+        </a>
         <nav className="nav-buttons">
-          <button>Home</button>
-          <button>About</button>
+          <a href="#">
+            <button>Home</button>
+          </a>
+          <a href="#about-me">
+            <button>About</button>
+          </a>
           <button>Experience</button>
           <button>Projects</button>
         </nav>
@@ -19,4 +25,3 @@ export default function Header({ children }) {
     </header>
   );
 }
-

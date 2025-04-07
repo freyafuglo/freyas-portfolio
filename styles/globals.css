@@ -3,9 +3,13 @@
 
 /* Global */
 
-h2 {
-    font-family: 'Chicago', 'MS Sans Serif', 'Tahoma', sans-serif;
+html {
+    scroll-behavior: smooth;
+  }  
 
+h2 {
+    font-family: 'Inter', sans-serif;
+font-weight: 400; /* thin */
   }
   
   p {
@@ -16,14 +20,15 @@ h2 {
 
   }
 
-  button{
+  button {
     cursor: pointer;
   }
 
-  button:hover {
-    background: linear-gradient(to top left, #ffffff, #e0e0e0); /* Reverse gradient for hover effect */
-    box-shadow: inset 1px 1px 4px #ffffff, inset -1px -1px 4px #808080; /* Lighten inner shadows on hover */
+  a {
+    color: inherit;
   }
+
+
 
 /* Header */
 .win95-header {
@@ -36,14 +41,15 @@ h2 {
   }
   
   .freya-btn {
-    text-decoration: none;
-    margin-left: 0.5rem;
-    padding: 3px 10px;
-    border: 2px outset #fff;
-    background-color: lightgray;
-    font-family: inherit;
+    background: none;
+    border: none;
+    margin-left: 1rem;
+    padding: 0;
+    font: inherit;
+    font-size: 20px;
+    color: inherit;
     cursor: pointer;
-    color: black;
+    text-decoration: none;
   }  
 
   .left-section {
@@ -58,50 +64,61 @@ h2 {
   
   
   .nav-buttons button {
-    margin-left: 0.5rem;
-    padding: 3px 10px;
-    border: 2px outset #fff;
-    background-color: lightgray;
-    font-family: inherit;
+    background: none;
+    border: none;
+    margin-left: 1rem;
+    padding: 0;
+    font: inherit;
+    color: inherit;
     cursor: pointer;
+    text-decoration: none;
   }
   
-  .nav-buttons button:active {
-    border: 2px inset #000;
-    background-color: #a0a0a0;
+  .nav-buttons button:hover {
+    color: rgb(27, 118, 209);
   }
+
 
   /* Layout */
   .light-mode {
     background-color: #b5daff; /* Baby blue */
-    color: #000000;
+    color: #1A1A40
   }
   
   .dark-mode {
-    background-color: #0a2239; /* Dark blue */
+    background-color: #0a2239; /* Dark blue --- eller #1A1A40; */
     color: #e0e0e0;
   }
+  
   .layout-header-wrapper {
     position: relative;
   }
 
     /* DarkModeToggle*/
   
-  .toggle-dark-mode {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    background-color: #d4d0c8;
-    border: 2px solid #808080;
-    border-right-color: #fff;
-    border-bottom-color: #fff;
-    font-family: 'MS Sans Serif', Tahoma, sans-serif;
-    font-size: 14px;
-    padding: 5px 10px;
-    cursor: pointer;
-    z-index: 10;
-  }
+    .toggle-dark-mode {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        background-color: transparent;
+        border: 1px solid ;
+        border-radius: 6px;
+        padding: 6px 12px;
+        font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        color: inherit;
+        cursor: pointer;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+      }
+      
+      .toggle-dark-mode:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-color:  rgb(27, 118, 209);
+        color: rgb(27, 118, 209);  /* Change text color on hover */
+      }
+      
   
+
     /*  Portfolio*/
 
 body {
@@ -117,7 +134,6 @@ body {
 
 }
 
-  
 
   .bread {
     max-width: 80ch; /* Limits line length to about 80 characters */
@@ -136,8 +152,17 @@ body {
     
   }
 
-
-
+  .sections {
+    max-width: 700px;          /* Controls how wide the content can be */
+    margin: 0 auto 2rem 0;     /* Top: 0, Right: auto, Bottom: 2rem, Left: 0 */
+    margin-top: 40px;
+    padding: 0 1rem;           /* Add horizontal padding */
+    text-align: left;          /* Make sure text is left-aligned */
+  }
+  
+.section-title {
+    margin-top: 0px;
+}
   
     /*  Animation */
 
