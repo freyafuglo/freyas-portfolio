@@ -33,10 +33,20 @@ export default function Portfolio() {
         className="animated-image"
       />
       <h1 className="header-text">{typedText}</h1>
-      <h2>Welcome to my portfolio page. More content coming soon!</h2>
+      <h2>Welcome to my portfolio page.</h2>
       <p>I'm a software engineer from Copenhagen, Denmark. I have a deep passion for 
         system development, and I am dedicated to pushing the boundaries of what is 
         possible in the world of technology.</p>
+
+        <h2 className="section-title">╰┈➤ about me</h2>
+<p>
+  I recently graduated with a degree in computer science and have been building full-stack
+  applications using technologies like React, Next.js, Node.js, and PostgreSQL.
+  <br /><br />
+  In my free time, I love exploring retro UI designs (like this one 👾), attending tech meetups,
+  and tinkering with side projects.
+</p>
+
     </div>
   );
 }

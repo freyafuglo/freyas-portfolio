@@ -1,0 +1,24 @@
+# Node.js dependencies
+node_modules/
+
+# Next.js build and cache files
+.next/
+out/
+
+# Logs and system files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Other common files to ignore
+.vscode/
+.idea/
+*.log

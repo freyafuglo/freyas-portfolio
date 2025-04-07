@@ -3,6 +3,7 @@
 import '../styles/globals.css';
 import DarkModeToggle from '../components/DarkModeToggle';
 import { useState, useEffect } from 'react';
+import Header from '../components/Header';
 
 export default function RootLayout({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
     }
   }, []);
 
+  //logic with css
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add('dark-mode');
@@ -33,10 +35,14 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body>
-        <DarkModeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-        {children}
-      </body>
+        <body>
+          <div className="layout-header-wrapper">
+          <Header>
+            <DarkModeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+          </Header>
+          </div>
+          {children}
+        </body>
     </html>
   );
 }
