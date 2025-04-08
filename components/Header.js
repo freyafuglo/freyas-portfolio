@@ -15,8 +15,12 @@ export default function Header({ children }) {
           <a href="#about-me">
             <button>About</button>
           </a>
-          <button>Experience</button>
+          <a href="#experience">
+            <button>Experience</button>
+          </a>
+          <a href="#projects">
           <button>Projects</button>
+          </a>
         </nav>
       </div>
       <div className="right-section">

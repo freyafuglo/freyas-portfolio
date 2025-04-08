@@ -1,185 +1,200 @@
 /* styles/globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 /* Global */
 
 html {
-    scroll-behavior: smooth;
-  }  
+  scroll-behavior: smooth;
+} 
 
 h2 {
-    font-family: 'Inter', sans-serif;
-font-weight: 400; /* thin */
-  }
-  
-  p {
-    font-family: 'Chicago', 'MS Sans Serif', 'Tahoma', sans-serif;
-    font-size: 1.1rem; /* Slightly larger text */
-    line-height: 1.8;  /* More space between lines */
-    max-width: 500px; /* this limits the width of the paragraph */
+  font-family: "Inter", sans-serif;
+  font-weight: 400; /* thin */
+}
 
-  }
+p {
+  font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
+  font-size: 1.1rem; /* Slightly larger text */
+  line-height: 1.8; /* More space between lines */
+  max-width: 500px; /* this limits the width of the paragraph */
+}
 
-  button {
-    cursor: pointer;
-  }
+button {
+  cursor: pointer;
+}
 
-  a {
-    color: inherit;
-  }
-
-
+a {
+  color: inherit;
+}
 
 /* Header */
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(8px); /* gives it a frosted glass effect */
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode- mega smart til custom dark mode på andre ting end 'default'!! */
+body.dark-mode header {
+  /*background-color: #0a2239;  /* darker version for dark mode */
+}
+
 .win95-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    padding: 0.5rem 1rem;
-    font-family: 'MS Sans Serif', Tahoma, sans-serif;
-  }
-  
-  .freya-btn {
-    background: none;
-    border: none;
-    margin-left: 1rem;
-    padding: 0;
-    font: inherit;
-    font-size: 20px;
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
-  }  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  .left-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-buttons {
-    display: flex;
-    margin-left: 20px;
-  }
-  
-  
-  .nav-buttons button {
-    background: none;
-    border: none;
-    margin-left: 1rem;
-    padding: 0;
-    font: inherit;
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .nav-buttons button:hover {
-    color: rgb(27, 118, 209);
-  }
+  padding: 1rem 2rem;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+}
 
+.freya-btn {
+  background: none;
+  border: none;
+  margin-left: 1rem;
+  padding: 0;
+  font: inherit;
+  font-size: 20px;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
 
-  /* Layout */
-  .light-mode {
-    background-color: #b5daff; /* Baby blue */
-    color: #1A1A40
-  }
-  
-  .dark-mode {
-    background-color: #0a2239; /* Dark blue --- eller #1A1A40; */
-    color: #e0e0e0;
-  }
-  
-  .layout-header-wrapper {
-    position: relative;
-  }
+.left-section {
+  display: flex;
+  align-items: center;
+}
 
-    /* DarkModeToggle*/
-  
-    .toggle-dark-mode {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        background-color: transparent;
-        border: 1px solid ;
-        border-radius: 6px;
-        padding: 6px 12px;
-        font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
-        font-size: 14px;
-        color: inherit;
-        cursor: pointer;
-        transition: background-color 0.2s ease, border-color 0.2s ease;
-      }
-      
-      .toggle-dark-mode:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-        border-color:  rgb(27, 118, 209);
-        color: rgb(27, 118, 209);  /* Change text color on hover */
-      }
-      
-  
+.nav-buttons {
+  display: flex;
+  margin-left: 20px;
+}
 
-    /*  Portfolio*/
+.nav-buttons button {
+  background: none;
+  border: none;
+  margin-left: 1rem;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-buttons button:hover {
+  color: rgb(27, 118, 209);
+}
+
+/* Layout */
+.light-mode {
+  background-color: #b5daff; /* Baby blue */
+  color: #1a1a40;
+}
+
+.dark-mode {
+  background-color: #0a2239; /* Dark blue --- eller #1A1A40; */
+  color: #e0e0e0;
+}
+
+.layout-header-wrapper {
+  position: relative;
+}
+
+/* DarkModeToggle*/
+
+.toggle-dark-mode {
+  margin-right: 50px;
+  top: 10px;
+  right: 20px;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.toggle-dark-mode:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgb(27, 118, 209);
+  color: rgb(27, 118, 209); /* Change text color on hover */
+}
+
+/*  Portfolio*/
 
 body {
-    font-family: 'MS Sans Serif', 'Tahoma', 'Verdana', sans-serif; 
+  font-family: "MS Sans Serif", "Tahoma", "Verdana", sans-serif;
 
-
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  
-  .header-text {
-    font-family: 'Chicago', 'MS Sans Serif', 'Tahoma', sans-serif;
-
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.header-text {
+  font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
+}
 
-  .bread {
-    max-width: 80ch; /* Limits line length to about 80 characters */
-    word-wrap: break-word; /* Ensures long words break if needed */
-    overflow-wrap: break-word; /* Alternative for better compatibility */
-    white-space: normal; /* Ensures text wraps normally */
-    margin: 0 auto; /* Centers the content horizontally */
-    margin-top: 100px;
-    padding: 0 20px; /* Optional padding for space on the sides */
-    text-align: center; /* Optional: Centers text if needed */
-    min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
-    display: flex;
-    justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center the content vertically */
-    flex-direction: column; /* Ensure content stacks vertically */
-    
-  }
+.bread {
+  max-width: 80ch; /* Limits line length to about 80 characters */
+  word-wrap: break-word; /* Ensures long words break if needed */
+  overflow-wrap: break-word; /* Alternative for better compatibility */
+  white-space: normal; /* Ensures text wraps normally */
+  margin: 0 auto; /* Centers the content horizontally */
+  margin-top: 100px;
+  padding: 0 20px; /* Optional padding for space on the sides */
+  text-align: center; /* Optional: Centers text if needed */
+  min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
+  display: flex;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content vertically */
+  flex-direction: column; /* Ensure content stacks vertically */
+}
 
-  .sections {
-    max-width: 700px;          /* Controls how wide the content can be */
-    margin: 0 auto 2rem 0;     /* Top: 0, Right: auto, Bottom: 2rem, Left: 0 */
-    margin-top: 40px;
-    padding: 0 1rem;           /* Add horizontal padding */
-    text-align: left;          /* Make sure text is left-aligned */
+.light-mode .bread {
+    background-color: #b5daff;
   }
   
+  .dark-mode .bread {
+    background-color: #0a2239;
+  }  
+  
+
+.sections {
+  max-width: 700px; /* Controls how wide the content can be */
+  margin: 0 auto 2rem 0; /* Top: 0, Right: auto, Bottom: 2rem, Left: 0 */
+  margin-top: 40px;
+  padding: 0 1rem; /* Add horizontal padding */
+  text-align: left; /* Make sure text is left-aligned */
+}
+
 .section-title {
-    margin-top: 0px;
+  margin-top: 0px;
 }
-  
-    /*  Animation */
 
-    
+/*  Animation */
 
-  @keyframes toggleSize {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); } /* Slight expansion */
-    100% { transform: scale(1); }
+@keyframes toggleSize {
+  0% {
+    transform: scale(1);
   }
-  
-  .animated-image {
-    animation: toggleSize 2s infinite steps(1); /* Slower (3s per cycle) */
+  50% {
+    transform: scale(1.05);
+  } /* Slight expansion */
+  100% {
+    transform: scale(1);
   }
-  
+}
 
+.animated-image {
+  animation: toggleSize 2s infinite steps(1); /* Slower (3s per cycle) */
+}
 
-  
-  
-  
+.me {
+    border-radius: 10px;
+}

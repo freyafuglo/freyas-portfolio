@@ -8,7 +8,7 @@ import Header from '../components/Header';
 export default function RootLayout({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Load dark mode preference
+  // Load dark mode preference (like when refreshing the page- it remembers their prev theme)
   useEffect(() => {
     const savedMode = localStorage.getItem('darkMode');
 
@@ -25,21 +25,41 @@ export default function RootLayout({ children }) {
   //logic with css
   useEffect(() => {
     if (isDarkMode) {
-      document.body.classList.add('dark-mode');
-      document.body.classList.remove('light-mode');
+      document.documentElement.classList.add('dark-mode');
+      document.documentElement.classList.remove('light-mode');
     } else {
-      document.body.classList.add('light-mode');
-      document.body.classList.remove('dark-mode');
+      document.documentElement.classList.add('light-mode');
+      document.documentElement.classList.remove('dark-mode');
     }
   }, [isDarkMode]);
 
   return (
-    <html lang="en">
+      <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  const savedMode = localStorage.getItem('darkMode');
+                  if (savedMode === 'true') {
+                    document.documentElement.classList.add('dark-mode');
+                  } else {
+                    document.documentElement.classList.add('light-mode');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
         <body>
           <div className="layout-header-wrapper">
+            
           <Header>
             <DarkModeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
           </Header>
+         
           </div>
           {children}
         </body>
