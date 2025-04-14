@@ -103,8 +103,8 @@ export default function Portfolio() {
               <Image
                 src="/Freya_Portræt.png"
                 alt="Me"
-                width={220}
-                height={285}                
+                width={225}
+                height={291}                
                 className="me"
               />
             </div>
@@ -215,7 +215,7 @@ export default function Portfolio() {
           <br></br>
           <br></br>
           <h1 className="section-title">╰┈➤ projects</h1>
-          <p>This section is under construction.</p>
+          <p>This section is under construction. 🧱🚧🏗️👷👷‍♀️🧑‍🏭🛠️🔩⚒️🔨</p>
         </div>
       </div>
     </div>
