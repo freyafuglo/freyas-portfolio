@@ -5,7 +5,7 @@
 
 html {
   scroll-behavior: smooth;
-} 
+}
 
 h2 {
   font-family: "Inter", sans-serif;
@@ -15,7 +15,7 @@ h2 {
 p {
   font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
   font-size: 1.1rem; /* Slightly larger text */
-  line-height: 1.8; /* More space between lines */
+  line-height: 2; /* More space between lines */
   max-width: 500px; /* this limits the width of the paragraph */
 }
 
@@ -157,13 +157,12 @@ body {
 }
 
 .light-mode .bread {
-    background-color: #b5daff;
-  }
-  
-  .dark-mode .bread {
-    background-color: #0a2239;
-  }  
-  
+  background-color: #b5daff;
+}
+
+.dark-mode .bread {
+  background-color: #0a2239;
+}
 
 .sections {
   max-width: 700px; /* Controls how wide the content can be */
@@ -195,6 +194,20 @@ body {
   animation: toggleSize 2s infinite steps(1); /* Slower (3s per cycle) */
 }
 
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* key line! */
+}
+
+.about-text p {
+  margin: 0; /* remove any default spacing */
+}
+
+.about-image {
+  padding-left: 40px;
+}
+
 .me {
-    border-radius: 10px;
+  border-radius: 10px;
 }

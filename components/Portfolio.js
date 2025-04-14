@@ -23,47 +23,58 @@ export default function Portfolio() {
 
   return (
     <div className="bread">
-     
-        <Image
-          src="/computer.png" // The image is accessed as if it's at the root
-          alt="Logo"
-          width={305} // Specify the width (in pixels)
-          height={300} // Specify the height (in pixels)
-          className="animated-image"
-        />
-        <h1 className="header-text">{typedText}</h1>
-        <h2>Welcome to my portfolio page.</h2>
-        <p>
-          I'm a software engineer from Copenhagen, Denmark. I have a deep
-          passion for system development, and I am dedicated to pushing the
-          boundaries of what is possible in the world of technology.
-        </p>
-      
+      <Image
+        src="/computer.png" // The image is accessed as if it's at the root
+        alt="Logo"
+        width={305} // Specify the width (in pixels)
+        height={300} // Specify the height (in pixels)
+        className="animated-image"
+      />
+      <h1 className="header-text">{typedText}</h1>
+      <h2>Welcome to my portfolio page.</h2>
+      <p>
+        I'm a software engineer from Copenhagen, Denmark. I have a deep passion
+        for system development, and I am dedicated to pushing the boundaries of
+        what is possible in the world of technology.
+      </p>
 
       <div className="sections">
         <div id="about-me">
-          <br></br><br></br><br></br>
+          <br />
+          <br />
+          <br />
           <h1 className="section-title">╰┈➤ about me</h1>
-          <p>
-            I recently graduated with a degree in computer science and have been
-            building full-stack applications using technologies like React,
-            Next.js, Node.js, and PostgreSQL.
-            <br />
-            <br />
-            In my free time, I love exploring retro UI designs (like this one
-            👾), attending tech meetups, and tinkering with side projects.
-          </p>
-          <Image
-          src="/me.jpg" // The image is accessed as if it's at the root
-          alt="Logo"
-          width={285}
-          height={262}
-          className="me"
-        />
+
+          <div className="about-content">
+            <div className="about-text">
+              <p>
+                I recently graduated with a degree in computer science and have
+                been building full-stack applications using technologies like
+                React, Next.js, Node.js, and PostgreSQL.
+                <br />
+                <br />
+                In my free time, I love exploring retro UI designs (like this
+                one 👾), attending tech meetups, and tinkering with side
+                projects.
+              </p>
+            </div>
+
+            <div className="about-image">
+              <Image
+                src="/me.jpg"
+                alt="Me"
+                width={285}
+                height={262}
+                className="me"
+              />
+            </div>
+          </div>
         </div>
 
         <div id="experience">
-        <br></br><br></br><br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           <h1 className="section-title">╰┈➤ experience</h1>
           <p>
             I recently graduated with a degree in computer science and have been
@@ -77,7 +88,9 @@ export default function Portfolio() {
         </div>
 
         <div id="projects">
-        <br></br><br></br><br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           <h1 className="section-title">╰┈➤ projects</h1>
           <p>
             I recently graduated with a degree in computer science and have been
