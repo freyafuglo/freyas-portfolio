@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Portfolio() {
-  const fullText = "hey there! i'm freya";
+  const fullText = "hi there! i'm freya.";
   const [typedText, setTypedText] = useState("");
 
   useEffect(() => {
@@ -23,21 +23,43 @@ export default function Portfolio() {
 
   return (
     <div className="bread">
-      <Image
-        src="/computer.png" // The image is accessed as if it's at the root
-        alt="Logo"
-        width={305} // Specify the width (in pixels)
-        height={300} // Specify the height (in pixels)
-        className="animated-image"
-      />
-      <h1 className="header-text">{typedText}</h1>
-      <h2>Welcome to my portfolio page.</h2>
-      <p>
-        I'm a software engineer from Copenhagen, Denmark. I have a passion for
-        building thoughtful, user-centered systems. I've contributed to
-        innovative health tech products and developed tailored digital solutions
-        for small businesses.
-      </p>
+      <div id="intro-sec">
+        <Image
+          src="/computer.png" // The image is accessed as if it's at the root
+          alt="Logo"
+          width={305} // Specify the width (in pixels)
+          height={300} // Specify the height (in pixels)
+          className="animated-image"
+        />
+        <h1 className="header-text">{typedText}</h1>
+        <h2>Welcome to my portfolio page.</h2>
+        <p>
+          I'm a software engineer from Copenhagen, Denmark. I have a passion for
+          building thoughtful, user-centered systems. I've contributed to
+          innovative health tech products and developed tailored digital
+          solutions for small businesses.
+        </p>
+      </div>
+      
+      <a href="mailto:freya.fuglo@gmail.com" className="email-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="email-icon"
+        >
+          <path d="M3 3h18a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V5a2 2 0 012-2z"></path>
+          <path d="M3 3l9 9 9-9"></path>
+        </svg>
+
+        <span>Say Hi!</span>
+      </a>
 
       <div className="sections">
         <div id="about-me">

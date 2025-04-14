@@ -29,7 +29,7 @@ a {
 }
 
 .blue-text {
-    color: rgb(27, 118, 209);
+  color: rgb(27, 118, 209);
 }
 
 /* Header */
@@ -133,6 +133,12 @@ body.dark-mode header {
   color: rgb(27, 118, 209); /* Change text color on hover */
 }
 
+/*.dark-mode .toggle-dark-mode:hover {
+  background-color: white;
+  border-color: rgb(27, 118, 209);
+  color: rgb(27, 118, 209); 
+}*/
+
 /*  Portfolio*/
 
 body {
@@ -161,12 +167,45 @@ body {
   flex-direction: column; /* Ensure content stacks vertically */
 }
 
+#intro-sec {
+  padding-bottom: 10px;
+}
+
+/* tror ik bliver brugt? efter html css*/
 .light-mode .bread {
   background-color: #b5daff;
 }
 
 .dark-mode .bread {
   background-color: #0a2239;
+}
+
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Courier New", monospace; /* Retro feel */
+  font-size: 16px;
+  color: rgb(27, 118, 209);
+  text-decoration: none;
+  border: 2px solid rgb(27, 118, 209);
+  padding: 7.5px 15px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.email-link:hover,
+.dark-mode .email-link:hover {
+  background-color: rgb(27, 118, 209);
+  color: #f0f0f0;
+}
+
+.email-icon {
+  margin-right: 8px; /* Space between the icon and text */
+}
+
+.dark-mode .email-link {
+  background-color: #e0e0e0;
 }
 
 .sections {
@@ -216,6 +255,7 @@ body {
 .me {
   filter: grayscale(50%);
   transition: filter 0.3s ease;
+  border-radius: 10px;
 }
 
 .me:hover {
