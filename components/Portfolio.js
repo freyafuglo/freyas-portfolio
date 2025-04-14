@@ -40,7 +40,7 @@ export default function Portfolio() {
           solutions for small businesses.
         </p>
       </div>
-      
+
       <a href="mailto:freya.fuglo@gmail.com" className="email-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -108,13 +108,25 @@ export default function Portfolio() {
           <br></br>
           <h1 className="section-title">╰┈➤ experience</h1>
           <p>
-            I recently graduated with a degree in computer science and have been
-            building full-stack applications using technologies like React,
-            Next.js, Node.js, and PostgreSQL.
-            <br />
-            <br />
-            In my free time, I love exploring retro UI designs (like this one
-            👾), attending tech meetups, and tinkering with side projects.
+            Full-stack Software Developer – Intern DemensAI ApS, Lyngby August
+            2024 – January 2025 <br></br>✦ Built a speech data collection app
+            used in early dementia detection research. Developed full-stack
+            features using React, Next.js, Node.js, and PostgreSQL. Created
+            wireframes and UI prototypes for patient-facing features. Designed
+            and implemented the database schema using Sequelize ORM.
+            Collaborated with researchers to ensure usability and clarity in the
+            test flow.
+            <br></br>
+            <br></br>Tutor KEA – Copenhagen School of Design and Technology
+            August 2023 – January 2024 <br></br>✦ Provided homework help in
+            KEA’s CodeLab café for IT students. Helped peers with technical
+            challenges and code debugging. Strengthened communication and
+            mentoring skills through one-on-one support. <br></br>
+            <br></br>Freelance Developer – Booking Platform DroneVisioner
+            <br></br> November 2023 – February 2024 <br></br>✦ Designed and developed a custom booking
+            site from scratch. Implemented a simple and intuitive interface for
+            service selection and scheduling. Delivered a tailored solution to
+            meet the client’s business needs.
           </p>
         </div>
 
