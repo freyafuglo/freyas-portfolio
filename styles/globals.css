@@ -267,3 +267,15 @@ body {
 .me:hover {
   filter: grayscale(0%);
 }
+
+
+.experience-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.experience-list li::before {
+  content: '☆'; /* Or ▸, ➤, etc. */
+  margin-right: 10px;
+  color: rgb(27, 118, 209);
+}
