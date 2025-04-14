@@ -17,7 +17,7 @@ p {
   font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
   font-size: 1.1rem; /* Slightly larger text */
   line-height: 2; /* More space between lines */
-  max-width: 500px; /* this limits the width of the paragraph */
+  max-width: 650px; /* this limits the width of the paragraph */
 }
 
 button {
@@ -152,7 +152,7 @@ body {
 }
 
 .bread {
-  max-width: 80ch; /* Limits line length to about 80 characters */
+  max-width: 100ch; /* Limits line length to about 80 characters */
   word-wrap: break-word; /* Ensures long words break if needed */
   overflow-wrap: break-word; /* Alternative for better compatibility */
   white-space: normal; /* Ensures text wraps normally */

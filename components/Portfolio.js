@@ -136,13 +136,7 @@ export default function Portfolio() {
           <br></br>
           <h1 className="section-title">╰┈➤ projects</h1>
           <p>
-            I recently graduated with a degree in computer science and have been
-            building full-stack applications using technologies like React,
-            Next.js, Node.js, and PostgreSQL.
-            <br />
-            <br />
-            In my free time, I love exploring retro UI designs (like this one
-            👾), attending tech meetups, and tinkering with side projects.
+            This section is under construction.
           </p>
         </div>
       </div>
