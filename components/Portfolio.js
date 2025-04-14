@@ -33,9 +33,10 @@ export default function Portfolio() {
       <h1 className="header-text">{typedText}</h1>
       <h2>Welcome to my portfolio page.</h2>
       <p>
-        I'm a software engineer from Copenhagen, Denmark. I have a deep passion
-        for system development, and I am dedicated to pushing the boundaries of
-        what is possible in the world of technology.
+        I'm a software engineer from Copenhagen, Denmark. I have a passion for
+        building thoughtful, user-centered systems. I've contributed to
+        innovative health tech products and developed tailored digital solutions
+        for small businesses.
       </p>
 
       <div className="sections">
@@ -48,14 +49,22 @@ export default function Portfolio() {
           <div className="about-content">
             <div className="about-text">
               <p>
-                I recently graduated with a degree in computer science and have
-                been building full-stack applications using technologies like
-                React, Next.js, Node.js, and PostgreSQL.
+                I recently graduated with an <b>AP degree</b> in{" "}
+                <b>Computer Science</b> from{" "}
+                <a
+                  href="https://kea.dk/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="blue-text"
+                >
+                  Copenhagen School of Design and Technology
+                </a>
+                . I have been building full-stack applications using
+                technologies like React, Next.js, Node.js, and PostgreSQL.
                 <br />
                 <br />
-                In my free time, I love exploring retro UI designs (like this
-                one 👾), attending tech meetups, and tinkering with side
-                projects.
+                In my free time, I love exploring UI designs, attending tech
+                meetups, and tinkering with side projects.
               </p>
             </div>
 

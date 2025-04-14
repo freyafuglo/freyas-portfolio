@@ -8,8 +8,9 @@ html {
 }
 
 h2 {
-  font-family: "Inter", sans-serif;
-  font-weight: 400; /* thin */
+  font-weight: 500; /* thin */
+  margin: 0 !important; /* remove any default spacing */
+  color: rgb(27, 118, 209);
 }
 
 p {
@@ -25,6 +26,10 @@ button {
 
 a {
   color: inherit;
+}
+
+.blue-text {
+    color: rgb(27, 118, 209);
 }
 
 /* Header */
