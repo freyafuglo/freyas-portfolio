@@ -101,10 +101,10 @@ export default function Portfolio() {
 
             <div className="about-image">
               <Image
-                src="/me.jpg"
+                src="/Freya_Portræt.png"
                 alt="Me"
-                width={285}
-                height={262}
+                width={220}
+                height={285}                
                 className="me"
               />
             </div>
@@ -121,7 +121,9 @@ export default function Portfolio() {
               <button onClick={() => setSelectedExperience("DemensAI")}>
                 DemensAI
               </button>
-              <button onClick={() => setSelectedExperience("KEA")}>KEA</button>
+              <button onClick={() => setSelectedExperience("KEA")}>
+                Copenhagen School of Design and Technology
+              </button>
               <button onClick={() => setSelectedExperience("DroneVisioner")}>
                 DroneVisioner
               </button>
