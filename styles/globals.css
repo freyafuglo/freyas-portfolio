@@ -30,6 +30,8 @@ a {
 
 .blue-text {
   color: rgb(27, 118, 209);
+  text-decoration: none;
+
 }
 
 /* Header */
@@ -142,7 +144,7 @@ body.dark-mode header {
 /*  Portfolio*/
 
 body {
-  font-family: "MS Sans Serif", "Tahoma", "Verdana", sans-serif;
+  font-family: "Courier New", monospace; /*ændret*/
 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -214,12 +216,18 @@ body {
   color: rgb(27, 118, 209);;
 }
 
+/*SECTIONS*/
+
 .sections {
   max-width: 700px; /* Controls how wide the content can be */
   margin: 0 auto 2rem 0; /* Top: 0, Right: auto, Bottom: 2rem, Left: 0 */
   margin-top: 40px;
   padding: 0 1rem; /* Add horizontal padding */
   text-align: left; /* Make sure text is left-aligned */
+  font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
+  font-size: 1.1rem; /* Slightly larger text */
+  line-height: 2; /* More space between lines */
+  max-width: 650px; /* this limits the width of the paragraph */
 }
 
 .section-title {
@@ -247,6 +255,8 @@ body {
 .about-content {
   display: flex;
   flex-direction: row;
+  /* gap: 2rem; space between blocks */
+
   align-items: flex-start; /* key line! */
 }
 
@@ -268,6 +278,18 @@ body {
   filter: grayscale(0%);
 }
 
+.tech {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 10px));
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* space between buttons and experience block */
+
+  align-items: flex-start; /* key line! */
+}
 
 .experience-list {
   list-style: none;
@@ -279,3 +301,39 @@ body {
   margin-right: 10px;
   color: rgb(27, 118, 209);
 }
+
+
+.experience-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1.5rem;
+
+}
+
+.experience-buttons button {
+  background-color: #e0e0e0;
+  border: 2px solid #999;
+  padding: 6px 16px;
+  margin-right: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: inherit;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #aaa;
+  transition: all 0.2s ease-in-out;
+}
+
+.experience-buttons button:hover {
+  background-color: #d5d5d5;
+  box-shadow: 1px 1px 0 #888;
+}
+
+.experience-buttons button:active {
+  box-shadow: inset 2px 2px 4px #aaa;
+  background-color: #c0c0c0;
+}
+
+
+
+

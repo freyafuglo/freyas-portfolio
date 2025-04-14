@@ -5,6 +5,7 @@ import Image from "next/image";
 export default function Portfolio() {
   const fullText = "hi there! i'm freya.";
   const [typedText, setTypedText] = useState("");
+  const [selectedExperience, setSelectedExperience] = useState("DemensAI");
 
   useEffect(() => {
     let index = -1;
@@ -84,12 +85,18 @@ export default function Portfolio() {
                   Copenhagen School of Design and Technology
                 </a>
                 . I have been building full-stack applications using
-                technologies like: React, Next.js, Node.js, and PostgreSQL.
-                <br />
-                <br />
-                In my free time, I love exploring UI designs, attending tech
-                meetups, and tinkering with side projects.
+                technologies like:{" "}
               </p>
+              <ul className="experience-list tech">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>Java</li>
+                <li>Python</li>
+              </ul>
+              In my free time, I love exploring UI designs, attending tech
+              meetups, and tinkering with side projects.
             </div>
 
             <div className="about-image">
@@ -109,74 +116,96 @@ export default function Portfolio() {
           <br></br>
           <br></br>
           <h1 className="section-title">╰┈➤ experience</h1>
-          <p>
-          <p>
-            <strong>Full-stack Software Developer – Intern</strong>
-            <br />
-            DemensAI ApS, Lyngby · August 2024 – January 2025
-          </p>
-          <ul className="experience-list">
-            <li>
-              Built a speech data collection app used in early dementia
-              detection research.
-            </li>
-            <li>
-              Developed full-stack features using React, Next.js, Node.js, and
-              PostgreSQL.
-            </li>
-            <li>
-              Created wireframes and UI prototypes for patient-facing features.
-            </li>
-            <li>
-              Designed and implemented the database schema using Sequelize ORM.
-            </li>
-            <li>
-              Collaborated with researchers to ensure usability and clarity in
-              the test flow.
-            </li>
-          </ul>
+          <div className="experience-content">
+            <div className="experience-buttons">
+              <button onClick={() => setSelectedExperience("DemensAI")}>
+                DemensAI
+              </button>
+              <button onClick={() => setSelectedExperience("KEA")}>KEA</button>
+              <button onClick={() => setSelectedExperience("DroneVisioner")}>
+                DroneVisioner
+              </button>
+            </div>
 
-          <br />
+            {selectedExperience === "DemensAI" && (
+              <div className="experience-block">
+                <p>
+                  <strong>Full-stack Software Developer – Intern</strong>
+                  <br />
+                  DemensAI ApS, Lyngby · August 2024 – January 2025
+                </p>
+                <ul className="experience-list">
+                  <li>
+                    Built a speech data collection app used in early dementia
+                    detection research.
+                  </li>
+                  <li>
+                    Developed full-stack features using React, Next.js, Node.js,
+                    and PostgreSQL.
+                  </li>
+                  <li>
+                    Created wireframes and UI prototypes for patient-facing
+                    features.
+                  </li>
+                  <li>
+                    Designed and implemented the database schema using Sequelize
+                    ORM.
+                  </li>
+                  <li>
+                    Collaborated with researchers to ensure usability and
+                    clarity in the test flow.
+                  </li>
+                </ul>
+              </div>
+            )}
 
-          <p>
-            <strong>Tutor</strong>
-            <br />
-            KEA – Copenhagen School of Design and Technology · August 2023 –
-            January 2024
-          </p>
-          <ul className="experience-list">
-            <li>
-              Provided homework help in KEA’s CodeLab café for IT students.
-            </li>
-            <li>
-              Assisted peers with technical challenges and code debugging.
-            </li>
-            <li>
-              Strengthened communication and mentoring skills through one-on-one
-              support.
-            </li>
-          </ul>
+            {selectedExperience === "KEA" && (
+              <div className="experience-block">
+                <p>
+                  <strong>Tutor</strong>
+                  <br />
+                  KEA – Copenhagen School of Design and Technology · August 2023
+                  – January 2024
+                </p>
+                <ul className="experience-list">
+                  <li>
+                    Provided homework help in KEA’s CodeLab café for IT
+                    students.
+                  </li>
+                  <li>
+                    Assisted peers with technical challenges and code debugging.
+                  </li>
+                  <li>
+                    Strengthened communication and mentoring skills through
+                    one-on-one support.
+                  </li>
+                </ul>
+              </div>
+            )}
 
-         
-
-          <br />
-
-          <p>
-            <strong>Freelance Developer – Booking Platform</strong>
-            <br />
-            DroneVisioner · November 2023 – February 2024
-          </p>
-          <ul className="experience-list">
-            <li>Designed and developed a custom booking site from scratch.</li>
-            <li>
-              Implemented a simple and intuitive interface for service selection
-              and scheduling.
-            </li>
-            <li>
-              Delivered a tailored solution to meet the client’s business needs.
-            </li>
-          </ul>
-          </p>
+            {selectedExperience === "DroneVisioner" && (
+              <div className="experience-block">
+                <p>
+                  <strong>Freelance Developer – Booking Platform</strong>
+                  <br />
+                  DroneVisioner · November 2023 – February 2024
+                </p>
+                <ul className="experience-list">
+                  <li>
+                    Designed and developed a custom booking site from scratch.
+                  </li>
+                  <li>
+                    Implemented a simple and intuitive interface for service
+                    selection and scheduling.
+                  </li>
+                  <li>
+                    Delivered a tailored solution to meet the client’s business
+                    needs.
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
 
         <div id="projects">
