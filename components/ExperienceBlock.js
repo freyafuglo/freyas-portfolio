@@ -1,4 +1,4 @@
-"use client";
+"use client"; //i dont remember why
 //import React from "react";
 
 const ExperienceBlock = ({ title, period, tasks }) => {

@@ -182,20 +182,27 @@ export default function Portfolio() {
             <ProjectCard
               title="DroneVisioner – Backend"
               description="REST API for a drone booking platform."
-              techList={["Node.js", "Express", "MongoDB"]}
+              techList={["Java", "Spring Boot", "MySQL"]}
               githubLink="https://github.com/Munira1212/DroneVisioner_backend"
             />
             <ProjectCard
               title="DroneVisioner – Frontend"
               description="User-friendly frontend for booking drone services."
-              techList={["React", "Tailwind", "Vite"]}
+              techList={["HTML", "JavaScript", "CSS"]}
               githubLink="https://github.com/UgbaadMohamed/DroneVisionerFrontend"
+              liveLink="http://dronevisioner.dk/"
             />
             <ProjectCard
-              title="KinoXP Backend"
+              title="KinoXP – Backend"
               description="Cinema management system with Spring Boot."
               techList={["Java", "Spring Boot", "MySQL"]}
               githubLink="https://github.com/FMIU-ONAV/KinoXP_backend"
+            />
+            <ProjectCard
+              title="KinoXP – Frontend"
+              description="Cinema management system frontend with JS."
+              techList={["JavaScript", "HTML", "CSS"]}
+              githubLink="https://github.com/FMIU-ONAV/KinoXP_frontend"
             />
             <ProjectCard
               title="Bilabonnement"
@@ -205,7 +212,7 @@ export default function Portfolio() {
             />
             <ProjectCard
               title="Make A Wish"
-              description="Wish fulfillment app made with a team."
+              description='Wishlist app made with a team. Similar concept to "Ønskeskyen".'
               techList={["Java", "HTML", "CSS"]}
               githubLink="https://github.com/UgbaadMohamed/MakeAWishProject"
             />

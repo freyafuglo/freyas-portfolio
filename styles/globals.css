@@ -193,7 +193,10 @@ body {
   border: 2px solid rgb(27, 118, 209);
   padding: 7.5px 15px;
   border-radius: 5px;
-  background-color: #f2f4f8;
+  /*background-color: #f0f0f0;  /*background-color: #f2f4f8; #e0e0e0*/
+  background-color: rgba(255, 255, 255, 0.75); /* white with 75% opacity */
+
+
   transition: all 0.3s ease;
 }
 
@@ -206,7 +209,7 @@ body {
   margin-right: 8px; /* Space between the icon and text */
 }
 
-.dark-mode .email-link {
+/*.dark-mode .email-link {
   background-color: rgb(27, 118, 209);
   border: 2px solid #e0e0e0;
   color: #e0e0e0;
@@ -215,9 +218,9 @@ body {
 .dark-mode .email-link:hover {
   background-color: #e0e0e0;
   color: rgb(27, 118, 209);
-}
+}*/
 
-/*SECTIONS*/
+/*SECTIONS-----------------------------------*/
 
 .sections {
   max-width: 800px; /* Controls how wide the content can be */
@@ -359,6 +362,6 @@ body {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding-top: 1.5rem;
+  gap: 1rem;
+  padding-top: 1rem;
 }
