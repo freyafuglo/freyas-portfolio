@@ -1,6 +1,7 @@
 "use client"; // Enables interactivity in Next.js
 import { useState, useEffect } from "react";
 
+import ExperienceBlock from "./ExperienceBlock"; // adjust path as needed
 import Image from "next/image";
 
 export default function Portfolio() {
@@ -131,69 +132,42 @@ export default function Portfolio() {
             </div>
 
             {selectedExperience === "DemensAI" && (
-              <div className="experience-block">
-                <p>
-                  <strong>Full-stack Software Developer – Intern</strong>
-                  <br />
-                  DemensAI ApS, Lyngby · August 2024 – January 2025
-                </p>
-                <ul className="experience-list">
-                  {[
-                    "Built a speech data collection app used in early dementia detection research.",
-                    "Developed full-stack features using React, Next.js, Node.js, and PostgreSQL.",
-                    "Created wireframes and UI prototypes for patient-facing features.",
-                    "Designed and implemented the database schema using Sequelize ORM.",
-                    "Collaborated with researchers to ensure usability and clarity in the test flow.",
-                  ].map((item, index) => (
-                    <li key={index} style={{ "--li-delay": `${index * 0.2}s` }}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ExperienceBlock
+                title="Full-stack Software Developer – Intern"
+                period="DemensAI ApS, Lyngby · August 2024 – January 2025"
+                tasks={[
+                  "Built a speech data collection app used in early dementia detection research.",
+                  "Developed full-stack features using React, Next.js, Node.js, and PostgreSQL.",
+                  "Created wireframes and UI prototypes for patient-facing features.",
+                  "Designed and implemented the database schema using Sequelize ORM.",
+                  "Collaborated with researchers to ensure usability and clarity in the test flow.",
+                ]}
+              />
             )}
 
             {selectedExperience === "KEA" && (
-              <div className="experience-block">
-                <p>
-                  <strong>Tutor</strong>
-                  <br />
-                  KEA – Copenhagen School of Design and Technology · August 2023
-                  – January 2024
-                </p>
-                <ul className="experience-list">
-                  {[
-                    "Provided homework help in KEA’s CodeLab café for IT students.",
-                    "Assisted peers with technical challenges and code debugging.",
-                    "Strengthened communication and mentoring skills through one-on-one support.",
-                  ].map((item, index) => (
-                    <li key={index} style={{ "--li-delay": `${index * 0.2}s` }}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ExperienceBlock
+                title="Tutor"
+                period="KEA – Copenhagen School of Design and Technology · August 2023
+              – January 2024"
+                tasks={[
+                  "Provided homework help in KEA’s CodeLab café for IT students.",
+                  "Assisted peers with technical challenges and code debugging.",
+                  "Strengthened communication and mentoring skills through one-on-one support.",
+                ]}
+              />
             )}
 
             {selectedExperience === "DroneVisioner" && (
-              <div className="experience-block">
-                <p>
-                  <strong>Freelance Developer – Booking Platform</strong>
-                  <br />
-                  DroneVisioner · November 2023 – February 2024
-                </p>
-                <ul className="experience-list">
-                  {[
-                    "Designed and developed a custom booking site from scratch.",
-                    "Implemented a simple and intuitive interface for service selection and scheduling.",
-                    "Delivered a tailored solution to meet the client’s business needs.",
-                  ].map((item, index) => (
-                    <li key={index} style={{ "--li-delay": `${index * 0.2}s` }}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                 <ExperienceBlock
+                 title="Freelance Developer – Booking Platform"
+                 period="DroneVisioner · November 2023 – February 2024"
+                 tasks={[
+                  "Designed and developed a custom booking site from scratch.",
+                  "Implemented a simple and intuitive interface for service selection and scheduling.",
+                  "Delivered a tailored solution to meet the client’s business needs.",
+                 ]}
+               />
             )}
           </div>
         </div>

@@ -17,7 +17,6 @@ p {
   font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
   font-size: 1.1rem; /* Slightly larger text */
   line-height: 2; /* More space between lines */
-  max-width: 650px; /* this limits the width of the paragraph */
 }
 
 button {
@@ -170,6 +169,7 @@ body {
 
 #intro-sec {
   padding-bottom: 10px;
+  max-width: 650px; /* this limits the width of the paragraph */
 }
 
 /* tror ik bliver brugt? efter html css*/
@@ -220,7 +220,7 @@ body {
 /*SECTIONS*/
 
 .sections {
-  max-width: 700px; /* Controls how wide the content can be */
+  max-width: 800px; /* Controls how wide the content can be */
   margin: 0 auto 2rem 0; /* Top: 0, Right: auto, Bottom: 2rem, Left: 0 */
   margin-top: 40px;
   padding: 0 1rem; /* Add horizontal padding */
@@ -228,7 +228,6 @@ body {
   font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
   font-size: 1.1rem; /* Slightly larger text */
   line-height: 2; /* More space between lines */
-  max-width: 650px; /* this limits the width of the paragraph */
 }
 
 .section-title {
@@ -256,7 +255,7 @@ body {
 .about-content {
   display: flex;
   flex-direction: row;
-  /* gap: 2rem; space between blocks */
+  gap: 2rem; /*space between blocks */
 
   align-items: flex-start; /* key line! */
 }
@@ -266,7 +265,7 @@ body {
 }
 
 .about-image {
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 .me {
@@ -288,7 +287,6 @@ body {
   display: flex;
   flex-direction: row;
   gap: 2rem; /* space between buttons and experience block */
-
   align-items: flex-start; /* key line! */
 }
 
@@ -300,7 +298,7 @@ body {
 .experience-list li {
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeInUp 0.5s forwards;
+  animation: fadeInUp 0.75s forwards;
   animation-delay: var(--li-delay); /* Delay for each list item */
 }
 
@@ -322,6 +320,7 @@ body {
   flex-direction: column;
   gap: 1rem;
   padding-top: 1.5rem;
+  flex: 0 0 200px; /* 👈 fixed width (no grow, no shrink) */
 }
 
 .experience-buttons button {
@@ -338,6 +337,8 @@ body {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1),
     -2px -2px 6px rgba(255, 255, 255, 0.6);
   transition: all 0.2s ease;
+  line-height: 1.5; /* More space between lines */
+
 }
 
 .experience-buttons button:hover {
@@ -351,3 +352,4 @@ body {
     inset -2px -2px 4px rgba(255, 255, 255, 0.3);
   background: rgba(230, 230, 255, 0.5);
 }
+
