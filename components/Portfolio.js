@@ -181,13 +181,13 @@ export default function Portfolio() {
           <div className="projects-grid">
             <ProjectCard
               title="DroneVisioner – Backend"
-              description="REST API for a drone booking platform."
+              description="REST API for the drone photography booking platform 'DroneVisioner'. Stores bookings with dates in the database."
               techList={["Java", "Spring Boot", "MySQL"]}
               githubLink="https://github.com/Munira1212/DroneVisioner_backend"
             />
             <ProjectCard
               title="DroneVisioner – Frontend"
-              description="User-friendly frontend for booking drone services."
+              description="User-friendly frontend for the website of 'DroneVisioner', where you can read about and book the drone photographer in question."
               techList={["HTML", "JavaScript", "CSS"]}
               githubLink="https://github.com/UgbaadMohamed/DroneVisionerFrontend"
               liveLink="http://dronevisioner.dk/"
@@ -212,8 +212,8 @@ export default function Portfolio() {
             />
             <ProjectCard
               title="Make A Wish"
-              description='Wishlist app made with a team. Similar concept to "Ønskeskyen".'
-              techList={["Java", "HTML", "CSS"]}
+              description='Wishlist app - similar concept as "Ønskeskyen". Stores wishes in a MySQL database.'
+              techList={["Java", "HTML", "CSS", "MySQL"]}
               githubLink="https://github.com/UgbaadMohamed/MakeAWishProject"
             />
           </div>
