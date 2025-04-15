@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import ExperienceBlock from "./ExperienceBlock"; // adjust path as needed
 import Image from "next/image";
+import Footer from "./Footer";
 
 export default function Portfolio() {
   const fullText = "hi there! i'm freya.";
@@ -194,19 +195,19 @@ export default function Portfolio() {
             />
             <ProjectCard
               title="KinoXP – Backend"
-              description="Cinema management system with Spring Boot."
+              description="Cinema management system using Spring Boot. Handles movie management and stores ticket bookings with dates and seat info via ticket ID."
               techList={["Java", "Spring Boot", "MySQL"]}
               githubLink="https://github.com/FMIU-ONAV/KinoXP_backend"
             />
             <ProjectCard
               title="KinoXP – Frontend"
-              description="Cinema management system frontend with JS."
+              description="JavaScript-based interface for browsing movies, booking/reserving tickets, and picking seats."
               techList={["JavaScript", "HTML", "CSS"]}
               githubLink="https://github.com/FMIU-ONAV/KinoXP_frontend"
             />
             <ProjectCard
               title="Bilabonnement"
-              description="Car subscription service platform."
+              description="Full-stack car subscription platform. Includes login system and booking functionality for renting cars."
               techList={["HTML", "Java", "CSS"]}
               githubLink="https://github.com/UgbaadMohamed/Bilabonnement"
             />
@@ -219,6 +220,7 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

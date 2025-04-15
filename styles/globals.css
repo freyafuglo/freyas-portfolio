@@ -1,7 +1,7 @@
 /* styles/globals.css */
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-/* Global */
+/* GLOBAL-------------------------- */
 
 html {
   scroll-behavior: smooth;
@@ -32,7 +32,7 @@ a {
   text-decoration: none;
 }
 
-/* Header */
+/* HEADER------------------------------- */
 
 header {
   position: fixed;
@@ -53,8 +53,7 @@ body.dark-mode header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-family: "MS Sans Serif", Tahoma, sans-serif;
 }
 
@@ -95,7 +94,23 @@ body.dark-mode header {
   color: rgb(27, 118, 209);
 }
 
-/* Layout */
+.right-section a {
+  margin-left: 0.75rem;
+  color: inherit;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.right-section a:hover {
+  color: rgb(27, 118, 209);
+}
+
+.link-btns {
+  /*padding-right: 30px;*/
+  margin-left: 850px;
+}
+
+/* LAYOUT-------------------------------- */
 .light-mode {
   background-color: #b5daff; /* Baby blue */
   color: #1a1a40;
@@ -110,36 +125,58 @@ body.dark-mode header {
   position: relative;
 }
 
-/* DarkModeToggle*/
+/* DarkModeToggle-------------------------*/
 
-.toggle-dark-mode {
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
   margin-right: 50px;
-  top: 10px;
-  right: 20px;
-  background-color: transparent;
-  border: 1px solid;
-  border-radius: 6px;
-  padding: 6px 12px;
-  font-family: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  color: inherit;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  background-color: #7b8a99; /* cool grey */
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.3s;
 }
 
-.toggle-dark-mode:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  /*border-color: rgb(27, 118, 209);
-  color: rgb(27, 118, 209); /* Change text color on hover */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #dce3ea; /* light cold grey */
+  transition: transform 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(30, 40, 60, 0.3); /* cooler shadow */
 }
 
-.dark-mode .toggle-dark-mode:hover {
-  background: rgba(255, 255, 255, 0.05);   
-  /*border-color: rgb(27, 118, 209);
-  color: rgb(27, 118, 209); */
+/* Toggle checked state */
+.theme-switch input:checked + .slider {
+  background-color: #3e4e5e; /* darker cool grey */
 }
 
-/*  Portfolio*/
+.theme-switch input:checked + .slider::before {
+  transform: translateX(22px);
+  background-color: #aab8c6;
+}
+
+/* PORTFOLIO----------------------*/
 
 body {
   font-family: "Courier New", monospace; /*ændret*/
@@ -172,7 +209,7 @@ body {
   max-width: 650px; /* this limits the width of the paragraph */
 }
 
-/* tror ik bliver brugt? efter html css*/
+/* tror ik de 2 bliver brugt? efter html css*/
 .light-mode .bread {
   background-color: #b5daff;
 }
@@ -185,17 +222,16 @@ body {
   display: inline-flex;
   align-items: center;
   font-family: "Courier New", monospace; /* Retro feel */
-  font-size: 17px;
-  font-weight: 600; /* thin */
+  font-size: 20px;
+  font-weight: 700; /* thin */
 
   color: rgb(27, 118, 209);
   text-decoration: none;
   border: 2px solid rgb(27, 118, 209);
-  padding: 7.5px 15px;
+  padding: 8.5px 15px;
   border-radius: 5px;
   /*background-color: #f0f0f0;  /*background-color: #f2f4f8; #e0e0e0*/
   background-color: rgba(255, 255, 255, 0.75); /* white with 75% opacity */
-
 
   transition: all 0.3s ease;
 }
@@ -209,18 +245,22 @@ body {
   margin-right: 8px; /* Space between the icon and text */
 }
 
-/*.dark-mode .email-link {
-  background-color: rgb(27, 118, 209);
+.dark-mode .email-link {
+  /*background-color: #061625;/*rgba(255, 255, 255, 0.9); /* white with 75% opacity */
+background-color: rgba(0, 0, 0, 0.33);
+  /*background-color: rgb(27, 118, 209);
   border: 2px solid #e0e0e0;
-  color: #e0e0e0;
+  color: #e0e0e0;*/
 }
 
 .dark-mode .email-link:hover {
+  background-color: rgb(27, 118, 209);
+  color: #f0f0f0; /*
   background-color: #e0e0e0;
-  color: rgb(27, 118, 209);
-}*/
+  color: rgb(27, 118, 209);*/
+}
 
-/*SECTIONS-----------------------------------*/
+/* SECTIONS-----------------------------------*/
 
 .sections {
   max-width: 800px; /* Controls how wide the content can be */
@@ -304,7 +344,6 @@ body {
   animation: fadeInUp 0.75s forwards;
   animation-delay: var(--li-delay); /* Delay for each list item */
   margin-bottom: 0.75rem; /* or 1rem if you want more space */
-
 }
 
 @keyframes fadeInUp {
@@ -344,7 +383,6 @@ body {
     -2px -2px 6px rgba(255, 255, 255, 0.6);
   transition: all 0.2s ease;
   line-height: 1.5; /* More space between lines */
-
 }
 
 .experience-buttons button:hover {
@@ -364,4 +402,22 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   padding-top: 1rem;
+}
+
+/*FOOTER------------------------*/
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,7 +1,12 @@
 "use client";
 import React from "react";
+import { FaFolder, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Header({ children }) {
+  const githubLink = "https://github.com/freyafuglo";
+  const linkedinLink = "https://www.linkedin.com/in/freya-fugl%C3%B8-a05aa021a/";
+  const email = "mailto:freya.fuglo@gmail.com";
+
   return (
     <header className="win95-header">
       <div className="left-section">
@@ -19,13 +24,25 @@ export default function Header({ children }) {
             <button>Experience</button>
           </a>
           <a href="#projects">
-          <button>Projects</button>
+            <button>Projects</button>
           </a>
         </nav>
       </div>
       <div className="right-section">
-        {children} {/* This will be the toggle button */}
+        <div className="link-btns">
+          <a href={githubLink} target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+          <a href={email}>
+            <FaEnvelope />
+          </a>
+          <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>          
+        </div>
+
       </div>
+      {children} {/* This will be the toggle button */}
     </header>
   );
 }
