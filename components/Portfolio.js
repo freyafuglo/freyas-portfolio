@@ -1,5 +1,6 @@
 "use client"; // Enables interactivity in Next.js
 import { useState, useEffect } from "react";
+
 import Image from "next/image";
 
 export default function Portfolio() {
@@ -104,7 +105,7 @@ export default function Portfolio() {
                 src="/Freya_Portræt.png"
                 alt="Me"
                 width={225}
-                height={291}                
+                height={291}
                 className="me"
               />
             </div>
@@ -112,9 +113,9 @@ export default function Portfolio() {
         </div>
 
         <div id="experience">
-          <br></br>
-          <br></br>
-          <br></br>
+          <br />
+          <br />
+          <br />
           <h1 className="section-title">╰┈➤ experience</h1>
           <div className="experience-content">
             <div className="experience-buttons">
@@ -137,26 +138,17 @@ export default function Portfolio() {
                   DemensAI ApS, Lyngby · August 2024 – January 2025
                 </p>
                 <ul className="experience-list">
-                  <li>
-                    Built a speech data collection app used in early dementia
-                    detection research.
-                  </li>
-                  <li>
-                    Developed full-stack features using React, Next.js, Node.js,
-                    and PostgreSQL.
-                  </li>
-                  <li>
-                    Created wireframes and UI prototypes for patient-facing
-                    features.
-                  </li>
-                  <li>
-                    Designed and implemented the database schema using Sequelize
-                    ORM.
-                  </li>
-                  <li>
-                    Collaborated with researchers to ensure usability and
-                    clarity in the test flow.
-                  </li>
+                  {[
+                    "Built a speech data collection app used in early dementia detection research.",
+                    "Developed full-stack features using React, Next.js, Node.js, and PostgreSQL.",
+                    "Created wireframes and UI prototypes for patient-facing features.",
+                    "Designed and implemented the database schema using Sequelize ORM.",
+                    "Collaborated with researchers to ensure usability and clarity in the test flow.",
+                  ].map((item, index) => (
+                    <li key={index} style={{ "--li-delay": `${index * 0.2}s` }}>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}
@@ -170,17 +162,15 @@ export default function Portfolio() {
                   – January 2024
                 </p>
                 <ul className="experience-list">
-                  <li>
-                    Provided homework help in KEA’s CodeLab café for IT
-                    students.
-                  </li>
-                  <li>
-                    Assisted peers with technical challenges and code debugging.
-                  </li>
-                  <li>
-                    Strengthened communication and mentoring skills through
-                    one-on-one support.
-                  </li>
+                  {[
+                    "Provided homework help in KEA’s CodeLab café for IT students.",
+                    "Assisted peers with technical challenges and code debugging.",
+                    "Strengthened communication and mentoring skills through one-on-one support.",
+                  ].map((item, index) => (
+                    <li key={index} style={{ "--li-delay": `${index * 0.2}s` }}>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}
@@ -193,17 +183,15 @@ export default function Portfolio() {
                   DroneVisioner · November 2023 – February 2024
                 </p>
                 <ul className="experience-list">
-                  <li>
-                    Designed and developed a custom booking site from scratch.
-                  </li>
-                  <li>
-                    Implemented a simple and intuitive interface for service
-                    selection and scheduling.
-                  </li>
-                  <li>
-                    Delivered a tailored solution to meet the client’s business
-                    needs.
-                  </li>
+                  {[
+                    "Designed and developed a custom booking site from scratch.",
+                    "Implemented a simple and intuitive interface for service selection and scheduling.",
+                    "Delivered a tailored solution to meet the client’s business needs.",
+                  ].map((item, index) => (
+                    <li key={index} style={{ "--li-delay": `${index * 0.2}s` }}>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}
