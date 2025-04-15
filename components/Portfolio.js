@@ -1,6 +1,6 @@
 "use client"; // Enables interactivity in Next.js
 import { useState, useEffect } from "react";
-
+import ProjectCard from "./ProjectCard";
 import ExperienceBlock from "./ExperienceBlock"; // adjust path as needed
 import Image from "next/image";
 
@@ -159,25 +159,57 @@ export default function Portfolio() {
             )}
 
             {selectedExperience === "DroneVisioner" && (
-                 <ExperienceBlock
-                 title="Freelance Developer – Booking Platform"
-                 period="DroneVisioner · November 2023 – February 2024"
-                 tasks={[
+              <ExperienceBlock
+                title="Freelance Developer – Booking Platform"
+                period="DroneVisioner · November 2023 – February 2024"
+                tasks={[
                   "Designed and developed a custom booking site from scratch.",
                   "Implemented a simple and intuitive interface for service selection and scheduling.",
                   "Delivered a tailored solution to meet the client’s business needs.",
-                 ]}
-               />
+                ]}
+              />
             )}
           </div>
         </div>
 
         <div id="projects">
-          <br></br>
-          <br></br>
-          <br></br>
+          <br />
+          <br />
+          <br />
           <h1 className="section-title">╰┈➤ projects</h1>
-          <p>This section is under construction. 🧱🚧🏗️👷👷‍♀️🧑‍🏭🛠️🔩⚒️🔨</p>
+
+          <div className="projects-grid">
+            <ProjectCard
+              title="DroneVisioner – Backend"
+              description="REST API for a drone booking platform."
+              techList={["Node.js", "Express", "MongoDB"]}
+              githubLink="https://github.com/Munira1212/DroneVisioner_backend"
+            />
+            <ProjectCard
+              title="DroneVisioner – Frontend"
+              description="User-friendly frontend for booking drone services."
+              techList={["React", "Tailwind", "Vite"]}
+              githubLink="https://github.com/UgbaadMohamed/DroneVisionerFrontend"
+            />
+            <ProjectCard
+              title="KinoXP Backend"
+              description="Cinema management system with Spring Boot."
+              techList={["Java", "Spring Boot", "MySQL"]}
+              githubLink="https://github.com/FMIU-ONAV/KinoXP_backend"
+            />
+            <ProjectCard
+              title="Bilabonnement"
+              description="Car subscription service platform."
+              techList={["HTML", "Java", "CSS"]}
+              githubLink="https://github.com/UgbaadMohamed/Bilabonnement"
+            />
+            <ProjectCard
+              title="Make A Wish"
+              description="Wish fulfillment app made with a team."
+              techList={["Java", "HTML", "CSS"]}
+              githubLink="https://github.com/UgbaadMohamed/MakeAWishProject"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,63 @@
+.projectCard {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-4px);
+  }
+  
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .folderIcon {
+    color: rgb(27, 118, 209);
+    font-size: 1.5rem;
+  }
+  
+  .githubIcon {
+    font-size: 1.3rem;
+    color: #333;
+    transition: color 0.2s ease;
+  }
+  
+  .githubIcon:hover {
+    color: rgb(27, 118, 209);
+  }
+  
+  .cardTitle {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .cardDesc {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .cardTech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6c6c6c;
+  }
+  
+  .cardTech li {
+    background-color: #e5e5f7;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
