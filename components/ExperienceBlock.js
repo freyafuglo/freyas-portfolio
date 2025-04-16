@@ -1,24 +1,25 @@
-"use client"; //i dont remember why
-//import React from "react";
+"use client";
+import { useInView } from "react-intersection-observer";
 
-const ExperienceBlock = ({ title, period, tasks }) => {
-    return (
-      <div className="experience-block">
-        <p>
-          <strong>{title}</strong>
-          <br />
-          {period}
-        </p>
-        <ul className="experience-list">
-          {tasks.map((item, index) => (
-            <li key={index} style={{ "--li-delay": `${index * 0.1}s` }}>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  };
-  
-  export default ExperienceBlock;
-  
+const ExperienceBlock = ({ role, workPlace, period, tasks }) => {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  return (
+    <div className="experience-block" ref={ref}>
+      <p>
+        <strong>{role + " @ " + workPlace}</strong>
+        <br />
+        {period.toUpperCase()}
+      </p>
+      <ul className={`experience-list ${inView ? "visible" : ""}`}>
+        {tasks.map((item, index) => (
+          <li key={index} style={{ "--li-delay": `${index * 0.1}s` }}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ExperienceBlock;

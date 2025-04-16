@@ -136,8 +136,9 @@ export default function Portfolio() {
 
             {selectedExperience === "DemensAI" && (
               <ExperienceBlock
-                title="Full-stack Software Developer – Intern"
-                period="DemensAI ApS, Lyngby · August 2024 – January 2025"
+                role="Software Developer Intern"
+                workPlace="DemensAI"
+                period="Aug 2024 – Jan 2025"
                 tasks={[
                   "Built a full-stack application from scratch for collecting speech (audio) and metadata through a step-by-step test, used in early dementia detection research.",
                   "Designed the database schema using Sequelize ORM and PostgresSQL, and implemented inclusive, patient-facing features with React, React-use-wizard, Next.js, and Node.js.",
@@ -148,9 +149,10 @@ export default function Portfolio() {
 
             {selectedExperience === "KEA" && (
               <ExperienceBlock
-                title="Tutor"
-                period="KEA – Copenhagen School of Design and Technology · August 2023
-              – January 2024"
+                role="Tutor"
+                workPlace="Copenhagen School of Design and Technology"
+                period="AUG 2023
+              – JAN 2024"
                 tasks={[
                   "Provided guidance in KEA’s Code Lab, assisting IT students with coursework and debugging challenges.",
                   "Supported peers in understanding technical concepts and improving their coding skills.",
@@ -161,8 +163,9 @@ export default function Portfolio() {
 
             {selectedExperience === "DroneVisioner" && (
               <ExperienceBlock
-                title="Freelance Developer – Booking Platform"
-                period="DroneVisioner · November 2023 – February 2024"
+                role="Freelance Developer – Booking Platform"
+                workPlace="DroneVisioner"
+                period="Nov 2023 – Feb 2024"
                 tasks={[
                   "Designed and developed a custom booking site from scratch.",
                   "Implemented a simple and intuitive interface for service selection and scheduling.",
