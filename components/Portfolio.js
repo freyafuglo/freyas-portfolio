@@ -141,7 +141,7 @@ export default function Portfolio() {
                 tasks={[
                   "Built a full-stack application from scratch for collecting speech (audio) and metadata through a step-by-step test, used in early dementia detection research.",
                   "Designed the database schema using Sequelize ORM and PostgresSQL, and implemented inclusive, patient-facing features with React, React-use-wizard, Next.js, and Node.js.",
-                  "Developed features for the production app, including a results page that integrates a machine learning API to visualize speech analysis for clinicians and patients. Collaborated closely with researchers and deployed the solution using Azure Virtual Machines."
+                  "Developed features for the production app, including a results page that integrates a machine learning API to visualize speech analysis for clinicians and patients. Collaborated closely with researchers and deployed the solution using Azure Virtual Machines.",
                 ]}
               />
             )}
@@ -152,9 +152,9 @@ export default function Portfolio() {
                 period="KEA – Copenhagen School of Design and Technology · August 2023
               – January 2024"
                 tasks={[
-                  "Provided homework help in KEA’s CodeLab café for IT students.",
-                  "Assisted peers with technical challenges and code debugging.",
-                  "Strengthened communication and mentoring skills through one-on-one support.",
+                  "Provided guidance in KEA’s Code Lab, assisting IT students with coursework and debugging challenges.",
+                  "Supported peers in understanding technical concepts and improving their coding skills.",
+                  "Fostered an inclusive and encouraging environment through one-on-one mentoring and peer support.",
                 ]}
               />
             )}
