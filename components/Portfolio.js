@@ -98,8 +98,10 @@ export default function Portfolio() {
                 <li>Java</li>
                 <li>Python</li>
               </ul>
-              In my free time, I love exploring UI designs, attending tech
-              meetups, and tinkering with side projects.
+              In my free time, I love learning about philosophical theories,
+              keeping up with scientific developments, and spending time in
+              nature. I also enjoy tinkering with side projects (currently, I'm
+              exploring TypeScript for a personal project).
             </div>
 
             <div className="about-image">
@@ -137,11 +139,9 @@ export default function Portfolio() {
                 title="Full-stack Software Developer – Intern"
                 period="DemensAI ApS, Lyngby · August 2024 – January 2025"
                 tasks={[
-                  "Built a speech data collection app used in early dementia detection research.",
-                  "Developed full-stack features using React, Next.js, Node.js, and PostgreSQL.",
-                  "Created wireframes and UI prototypes for patient-facing features.",
-                  "Designed and implemented the database schema using Sequelize ORM.",
-                  "Collaborated with researchers to ensure usability and clarity in the test flow.",
+                  "Built a full-stack application from scratch for collecting speech (audio) and metadata through a step-by-step test, used in early dementia detection research.",
+                  "Designed the database schema using Sequelize ORM and PostgresSQL, and implemented inclusive, patient-facing features with React, React-use-wizard, Next.js, and Node.js.",
+                  "Developed features for the production app, including a results page that integrates a machine learning API to visualize speech analysis for clinicians and patients. Collaborated closely with researchers and deployed the solution using Azure Virtual Machines."
                 ]}
               />
             )}
