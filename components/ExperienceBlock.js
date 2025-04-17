@@ -7,10 +7,15 @@ const ExperienceBlock = ({ role, workPlace, period, tasks }) => {
   return (
     <div className="experience-block" ref={ref}>
       <p>
-        <strong>{role + " @ " + workPlace}</strong>
+        <strong>
+          <span className="role">{role}</span>
+          {" @ "}
+          <span className="workplace">{workPlace}</span>
+        </strong>
         <br />
         {period.toUpperCase()}
       </p>
+
       <ul className={`experience-list ${inView ? "visible" : ""}`}>
         {tasks.map((item, index) => (
           <li key={index} style={{ "--li-delay": `${index * 0.1}s` }}>

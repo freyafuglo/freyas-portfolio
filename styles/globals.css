@@ -326,11 +326,22 @@ background-color: rgba(0, 0, 0, 0.33);
   grid-template-columns: repeat(2, minmax(150px, 10px));
 }
 
+/*EXPERIENCE------------------------*/
+
 .experience-content {
   display: flex;
   flex-direction: row;
   gap: 2rem; /* space between buttons and experience block */
   align-items: flex-start; /* key line! */
+}
+
+.role {
+  font-size: 1.2rem; /* or larger if needed */
+}
+
+.workplace {
+  font-size: 1.2rem;
+  color: rgb(27, 118, 209); /* your preferred blue tone */
 }
 
 .experience-list {

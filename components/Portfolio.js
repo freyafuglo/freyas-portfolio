@@ -163,14 +163,14 @@ export default function Portfolio() {
 
             {selectedExperience === "DroneVisioner" && (
               <ExperienceBlock
-                role="Freelance Developer – Booking Platform"
+                role="Freelance Developer"
                 workPlace="DroneVisioner"
                 period="Nov 2023 – Feb 2024"
                 tasks={[
-                  "Designed and developed a custom booking site from scratch.",
-                  "Implemented a simple and intuitive interface for service selection and scheduling.",
-                  "Delivered a tailored solution to meet the client’s business needs.",
-                ]}
+                  "Designed and developed a full-stack drone photography booking platform from scratch.",
+                  "Built a user-friendly frontend where customers can explore services and schedule bookings.",
+                  "Implemented a RESTful API with Java and Spring Boot, storing bookings and customer data in a MySQL database.",
+                ]}                
               />
             )}
           </div>
