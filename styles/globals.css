@@ -344,9 +344,25 @@ background-color: rgba(0, 0, 0, 0.33);
   color: rgb(27, 118, 209); /* your preferred blue tone */
 }
 
+.period {
+  font-size: 16px; /* or 14px */
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
 .experience-list {
   list-style: none;
   padding-left: 0;
+}
+
+.experience-list  li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.75s forwards;
+  animation-delay: var(--li-delay); /* Delay for each list item */
+  margin-bottom: 0.75rem; /* or 1rem if you want more space */
+  font-size: 16px;
+  visibility: hidden;
 }
 
 .experience-list li {
@@ -356,7 +372,10 @@ background-color: rgba(0, 0, 0, 0.33);
   animation-delay: var(--li-delay); /* Delay for each list item */
   margin-bottom: 0.75rem; /* or 1rem if you want more space */
   font-size: 16px;
+  visibility: visible;
 }
+
+
 
 @keyframes fadeInUp {
   to {
@@ -433,3 +452,4 @@ background-color: rgba(0, 0, 0, 0.33);
   text-decoration: none;
   color: inherit;
 }
+

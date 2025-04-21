@@ -1,5 +1,6 @@
 "use client"; // Enables interactivity in Next.js
 import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer"; // Import the hook
 import ProjectCard from "./ProjectCard";
 import ExperienceBlock from "./ExperienceBlock"; // adjust path as needed
 import Image from "next/image";
@@ -9,6 +10,8 @@ export default function Portfolio() {
   const fullText = "hi there! i'm freya.";
   const [typedText, setTypedText] = useState("");
   const [selectedExperience, setSelectedExperience] = useState("DemensAI");
+  const { ref, inView } = useInView({ triggerOnce: true });
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     let index = -1;
@@ -29,7 +32,7 @@ export default function Portfolio() {
     <div className="bread">
       <div id="intro-sec">
         <Image
-          src="/computer.png" // The image is accessed as if it's at the root
+          src="/computer.PNG" // The image is accessed as if it's at the root
           alt="Logo"
           width={305} // Specify the width (in pixels)
           height={300} // Specify the height (in pixels)
@@ -90,7 +93,11 @@ export default function Portfolio() {
                 . I have been building full-stack applications using
                 technologies like:{" "}
               </p>
-              <ul className="experience-list tech">
+              <ul
+                className={`experience-list tech ${
+                  inView || isVisible ? "is-visible" : ""
+                }`}
+              >
                 <li>React</li>
                 <li>Next.js</li>
                 <li>Node.js</li>
@@ -170,7 +177,7 @@ export default function Portfolio() {
                   "Designed and developed a full-stack drone photography booking platform from scratch.",
                   "Built a user-friendly frontend where customers can explore services and schedule bookings.",
                   "Implemented a RESTful API with Java and Spring Boot, storing bookings and customer data in a MySQL database.",
-                ]}                
+                ]}
               />
             )}
           </div>
