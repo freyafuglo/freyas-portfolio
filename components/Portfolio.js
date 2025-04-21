@@ -1,5 +1,5 @@
 "use client"; // Enables interactivity in Next.js
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer"; // Import the hook
 import ProjectCard from "./ProjectCard";
 import ExperienceBlock from "./ExperienceBlock"; // adjust path as needed
@@ -12,6 +12,7 @@ export default function Portfolio() {
   const [selectedExperience, setSelectedExperience] = useState("DemensAI");
   const { ref, inView } = useInView({ triggerOnce: true });
   const [isVisible, setIsVisible] = useState(false);
+  const myRef = useRef();
 
   useEffect(() => {
     let index = -1;
@@ -28,15 +29,20 @@ export default function Portfolio() {
     return () => clearInterval(typingInterval); // Cleanup on unmount
   }, []);
 
+  useEffect(() => {
+    console.log('myRef', myRef.current)
+  })
+
   return (
     <div className="bread">
       <div id="intro-sec">
         <Image
-          src="/computer.PNG" // The image is accessed as if it's at the root
-          alt="Logo"
+          src="/computer.PNG" // The image is accessed as if it's at the root. ændrede til PNG i caps lock fordi vercel er case sensitive
+          alt="A cool computer"
           width={305} // Specify the width (in pixels)
           height={300} // Specify the height (in pixels)
           className="animated-image"
+          priority
         />
         <h1 className="header-text">{typedText}</h1>
         <h2>Welcome to my portfolio page.</h2>
@@ -94,6 +100,7 @@ export default function Portfolio() {
                 technologies like:{" "}
               </p>
               <ul
+                ref={myRef}
                 className={`experience-list tech ${
                   inView || isVisible ? "is-visible" : ""
                 }`}
