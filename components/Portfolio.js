@@ -10,9 +10,9 @@ export default function Portfolio() {
   const fullText = "hi there! i'm freya.";
   const [typedText, setTypedText] = useState("");
   const [selectedExperience, setSelectedExperience] = useState("DemensAI");
-  const { ref, inView } = useInView({ triggerOnce: true });
-  const [isVisible, setIsVisible] = useState(false);
-  const myRef = useRef();
+  const { ref: myRef, inView } = useInView({ triggerOnce: true });
+  //const [isVisible, setIsVisible] = useState(false);
+  //const myRef = useRef();
 
   useEffect(() => {
     let index = -1;
@@ -29,9 +29,9 @@ export default function Portfolio() {
     return () => clearInterval(typingInterval); // Cleanup on unmount
   }, []);
 
-  useEffect(() => {
+  /*useEffect(() => {
     console.log('myRef', myRef.current)
-  })
+  })*/
 
   return (
     <div className="bread">
@@ -102,7 +102,7 @@ export default function Portfolio() {
               <ul
                 ref={myRef}
                 className={`experience-list tech ${
-                  inView || isVisible ? "is-visible" : ""
+                  inView ? "is-visible" : ""
                 }`}
               >
                 <li>React</li>

@@ -355,20 +355,17 @@ background-color: rgba(0, 0, 0, 0.33);
   padding-left: 0;
 }
 
-.experience-list  li {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeInUp 0.75s forwards;
-  animation-delay: var(--li-delay); /* Delay for each list item */
-  margin-bottom: 0.75rem; /* or 1rem if you want more space */
-  font-size: 16px;
-  visibility: hidden;
-}
-
 .experience-list li {
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeInUp 0.75s forwards;
+  visibility: hidden;
+}
+
+
+.experience-list.is-visible li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 1s forwards; /*name of animation + duration*/
   animation-delay: var(--li-delay); /* Delay for each list item */
   margin-bottom: 0.75rem; /* or 1rem if you want more space */
   font-size: 16px;
