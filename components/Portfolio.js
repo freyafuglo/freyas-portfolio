@@ -10,9 +10,7 @@ export default function Portfolio() {
   const fullText = "hi there! i'm freya.";
   const [typedText, setTypedText] = useState("");
   const [selectedExperience, setSelectedExperience] = useState("DemensAI");
-  const { ref: myRef, inView } = useInView({ triggerOnce: true });
-  //const [isVisible, setIsVisible] = useState(false);
-  //const myRef = useRef();
+  const { ref: techRef, inView } = useInView({ triggerOnce: true });
 
   useEffect(() => {
     let index = -1;
@@ -30,7 +28,7 @@ export default function Portfolio() {
   }, []);
 
   /*useEffect(() => {
-    console.log('myRef', myRef.current)
+    console.log('techRef', techRef.current)
   })*/
 
   return (
@@ -100,10 +98,8 @@ export default function Portfolio() {
                 technologies like:{" "}
               </p>
               <ul
-                ref={myRef}
-                className={`experience-list tech ${
-                  inView ? "is-visible" : ""
-                }`}
+                ref={techRef}
+                className={`experience-list tech ${inView ? "is-visible" : ""}`}
               >
                 <li>React</li>
                 <li>Next.js</li>

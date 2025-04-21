@@ -365,16 +365,39 @@ background-color: rgba(0, 0, 0, 0.33);
 .experience-list.is-visible li {
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeInUp 1s forwards; /*name of animation + duration*/
+  animation: fadeInUp 1s ease forwards; /*name of animation + duration*/
   animation-delay: var(--li-delay); /* Delay for each list item */
   margin-bottom: 0.75rem; /* or 1rem if you want more space */
   font-size: 16px;
   visibility: visible;
 }
 
-
+.experience-list.is-visible li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUpTech 1s ease forwards;
+  animation-delay: var(--li-delay); /* Delay for each list item */
+  margin-bottom: 0.75rem; /* or 1rem if you want more space */
+  font-size: 16px;
+  visibility: visible;
+}
 
 @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpTech {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);

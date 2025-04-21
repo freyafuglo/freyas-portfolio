@@ -5,7 +5,7 @@ const ExperienceBlock = ({ role, workPlace, period, tasks }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
-    <div className="experience-block" ref={ref}>
+    <div className="experience-block">
       <p>
         <strong>
           <span className="role">{role}</span>
@@ -16,7 +16,7 @@ const ExperienceBlock = ({ role, workPlace, period, tasks }) => {
         <span className="period">{period.toUpperCase()}</span>
       </p>
 
-      <ul className={`experience-list ${inView ? "is-visible" : ""}`}>
+      <ul ref={ref} className={`experience-list ${inView ? "is-visible" : ""}`}>
         {tasks.map((item, index) => (
           <li key={index} style={{ "--li-delay": `${index * 0.1}s` }}>
             {item}
