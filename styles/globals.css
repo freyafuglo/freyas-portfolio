@@ -360,12 +360,6 @@ background-color: rgba(0, 0, 0, 0.33);
   padding-left: 20px;
 }
 
-@media (max-width: 768px) {
-  .about-image {
-    display: none;
-  }
-}
-
 .me {
   filter: grayscale(35%);
   transition: filter 0.3s ease;
@@ -576,4 +570,59 @@ background-color: rgba(0, 0, 0, 0.33);
   /*transform: translateY(50px); /* Keep hidden before animation */
   visibility: hidden;
 }
+
+/* LAYOUT FOR MOBILE DEVICES---------------------------*/
+
+@media (max-width: 768px) {
+  .about-image {
+    display: none; /* ✅ hide image on mobile */
+  }
+
+  .experience-content {
+    flex-direction: column; /* stack vertically */
+    align-items: left;    /* center all content */
+    gap: 2rem;
+    display: block;
+  }
+
+  .experience-buttons {
+    display: flex;
+    flex-direction: row;     /* buttons side-by-side */
+    justify-content: left;
+    gap: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .experience-buttons button {
+    position: relative;
+    font-size: 1rem;
+    text-indent: -9999px;     /* hide original label */
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    width: auto;
+  }
+
+  .experience-buttons button::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* center the number */
+    text-indent: 0;
+    display: block;
+    font-weight: bold;
+  }
+
+  .experience-buttons button:nth-child(1)::before {
+    content: "00.";
+  }
+
+  .experience-buttons button:nth-child(2)::before {
+    content: "01.";
+  }
+
+  .experience-buttons button:nth-child(3)::before {
+    content: "02.";
+  }
+}
+
 
