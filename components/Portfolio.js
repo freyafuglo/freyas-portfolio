@@ -75,14 +75,15 @@ export default function Portfolio() {
   return (
     <div className="bread">
       <div id="intro-sec">
+      {hasMounted && (
         <Image
           src="/computer.PNG" // The image is accessed as if it's at the root. ændrede til PNG i caps lock fordi vercel er case sensitive
           alt="A cool computer"
-          width={305} // Specify the width (in pixels)
-          height={300} // Specify the height (in pixels)
+          width={280} // Specify the width (in pixels)
+          height={275} // Specify the height (in pixels)
           className="animated-image"
           priority
-        />
+        />)}
         <h1 className="header-text">{typedText}</h1>
         {hasMounted && (
           <div

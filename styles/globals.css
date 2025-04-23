@@ -573,7 +573,10 @@ background-color: rgba(0, 0, 0, 0.33);
 
 /* LAYOUT FOR MOBILE DEVICES---------------------------*/
 
+
+
 @media (max-width: 768px) {
+
   .about-image {
     display: none; /* ✅ hide image on mobile */
   }
