@@ -263,7 +263,7 @@ background-color: rgba(0, 0, 0, 0.33);
 /* SECTIONS-----------------------------------*/
 
 .sections {
-  max-width: 900px; /* skiftet fra 800 til 900 for at give mere plads fx til project cards*/
+  max-width: 950px; /* skiftet fra 800 til 950 for at give mere plads fx til project cards*/
   margin: 40px auto 2rem auto; /*alignet den i midten*/
   margin-top: 40px;
   padding: 0 1rem; /* Add horizontal padding */
@@ -304,11 +304,13 @@ background-color: rgba(0, 0, 0, 0.33);
 }
 
 .about-text p {
-  margin: 0; /* remove any default spacing */
+  margin: 0px; /* remove any default spacing */
+  margin-top: 10px;
   max-width: 600px; /*narrowed*/
 }
 
 .about-image {
+  margin-top: 10px;
   padding-left: 20px;
 }
 
@@ -458,7 +460,7 @@ background-color: rgba(0, 0, 0, 0.33);
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-gap: 10px;
   padding-top: 1rem;
 }
 

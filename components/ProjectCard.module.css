@@ -6,7 +6,7 @@
   transition: transform 0.2s ease;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem; /*evt 0.5*/
+  gap: 0rem; /*evt 0.5*/
 }
 
 .projectCard:hover {
