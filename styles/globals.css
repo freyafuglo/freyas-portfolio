@@ -582,7 +582,7 @@ background-color: rgba(0, 0, 0, 0.33);
     flex-direction: column; /* stack vertically */
     align-items: left;    /* center all content */
     gap: 2rem;
-    /*display: block;*/
+    display: block;
   }
 
   .experience-buttons {

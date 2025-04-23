@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 const ExperienceBlock = ({ role, workPlace, period, tasks }) => {
   const { ref, inView } = useInView({ triggerOnce: true,
-    threshold: 0.35, });
+    threshold: 0.35, }); //evt gøre lidt kortere, med display li elementer en for en
 
   return (
     <div className="experience-block">
