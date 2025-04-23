@@ -263,8 +263,8 @@ background-color: rgba(0, 0, 0, 0.33);
 /* SECTIONS-----------------------------------*/
 
 .sections {
-  max-width: 800px; /* Controls how wide the content can be */
-  margin: 0 auto 2rem 0; /* Top: 0, Right: auto, Bottom: 2rem, Left: 0 */
+  max-width: 900px; /* skiftet fra 800 til 900 for at give mere plads fx til project cards*/
+  margin: 40px auto 2rem auto; /*alignet den i midten*/
   margin-top: 40px;
   padding: 0 1rem; /* Add horizontal padding */
   text-align: left; /* Make sure text is left-aligned */
@@ -305,6 +305,7 @@ background-color: rgba(0, 0, 0, 0.33);
 
 .about-text p {
   margin: 0; /* remove any default spacing */
+  max-width: 600px; /*narrowed*/
 }
 
 .about-image {
@@ -447,6 +448,12 @@ background-color: rgba(0, 0, 0, 0.33);
     inset -2px -2px 4px rgba(255, 255, 255, 0.3);
   background: rgba(230, 230, 255, 0.5);
 }
+
+.experience-block {
+  max-width: 600px; /*narrowed*/
+}
+
+/*PROJECTS*/
 
 .projects-grid {
   display: grid;

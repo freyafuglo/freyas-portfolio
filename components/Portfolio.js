@@ -108,10 +108,12 @@ export default function Portfolio() {
                 <li>Java</li>
                 <li>Python</li>
               </ul>
+              <p>
               In my free time, I love learning about philosophical theories,
               keeping up with scientific developments, and spending time in
               nature. I also enjoy tinkering with side projects (currently, I'm
               exploring TypeScript for a personal project).
+              </p>
             </div>
 
             <div className="about-image">
@@ -221,7 +223,7 @@ export default function Portfolio() {
             <ProjectCard
               title="Bilabonnement"
               description="Full-stack car subscription platform. Includes login system and booking functionality for renting cars."
-              techList={["HTML", "Java", "CSS"]}
+              techList={["HTML", "Java", "CSS", "MySQL"]}
               githubLink="https://github.com/UgbaadMohamed/Bilabonnement"
             />
             <ProjectCard
