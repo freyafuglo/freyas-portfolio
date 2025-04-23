@@ -20,15 +20,19 @@
 }
 
 .folderIcon {
-  color: rgb(27, 118, 209);
-  font-size: 1.5rem;
+  fill: rgb(27, 118, 209);
+  font-size: 1.75rem;
 }
 
 .githubIcon {
   color: inherit;
   transition: color 0.2s ease;
+  font-size: 1.5rem;
 }
 
+.externalIcon {
+  font-size: 1.5rem;
+}
 
 .cardTitle {
   font-weight: 600;
@@ -69,9 +73,8 @@
   color: inherit;
   transition: color 0.2s;
   font-size: 1.3rem;
-
 }
 
 .card-links a:hover {
-    color: rgb(27, 118, 209);
+  color: rgb(27, 118, 209);
 }

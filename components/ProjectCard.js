@@ -15,7 +15,7 @@ const ProjectCard = ({ title, description, techList, githubLink, liveLink }) => 
         )}
         {liveLink && (
       <a href={liveLink} target="_blank" rel="noopener noreferrer">
-        <FiExternalLink />
+        <FiExternalLink className={styles.externalIcon}/>
       </a>
     )}
      </div>
