@@ -36,7 +36,6 @@ export default function Portfolio() {
     threshold: 0.15,
   });
 
-
   useEffect(() => {
     setHasMounted(true);
   }, []); //sørger for at den når til js før den viser noget på skærmen (for at undgå hydration issue)
@@ -55,6 +54,23 @@ export default function Portfolio() {
 
     return () => clearInterval(typingInterval); // Cleanup on unmount
   }, []);
+
+  function useIsMobile(breakpoint = 768) {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const checkScreen = () => setIsMobile(window.innerWidth <= breakpoint);
+
+      checkScreen(); // run once on mount
+      window.addEventListener("resize", checkScreen);
+
+      return () => window.removeEventListener("resize", checkScreen);
+    }, [breakpoint]);
+
+    return isMobile;
+  }
+
+  const isMobile = useIsMobile();
 
   return (
     <div className="bread">
@@ -194,13 +210,15 @@ export default function Portfolio() {
             <div className="experience-content">
               <div className="experience-buttons">
                 <button onClick={() => setSelectedExperience("DemensAI")}>
-                  DemensAI
+                  {isMobile ? "00." : "DemensAI"}
                 </button>
                 <button onClick={() => setSelectedExperience("KEA")}>
-                  Copenhagen School of Design and Technology
+                  {isMobile
+                    ? "01."
+                    : "Copenhagen School of Design and Technology"}
                 </button>
                 <button onClick={() => setSelectedExperience("DroneVisioner")}>
-                  DroneVisioner
+                  {isMobile ? "02." : "DroneVisioner"}
                 </button>
               </div>
 
@@ -247,7 +265,7 @@ export default function Portfolio() {
           </div>
         )}
 
-{hasMounted && (
+        {hasMounted && (
           <div
             id="projects"
             ref={projRef}
@@ -257,66 +275,65 @@ export default function Portfolio() {
                 : "proj-hidden-before-animate"
             }`}
           >
-          <br />
-          <br />
-          <br />
-          <h1 className="section-title">╰┈➤ projects</h1>
+            <br />
+            <br />
+            <br />
+            <h1 className="section-title">╰┈➤ projects</h1>
 
-          <div className="projects-grid">
-            <ProjectCard
-              title="DroneVisioner – Backend"
-              description="REST API for the drone photography booking platform 'DroneVisioner'. Stores bookings with dates in the database."
-              techList={["Java", "Spring Boot", "MySQL"]}
-              githubLink="https://github.com/Munira1212/DroneVisioner_backend"
-            />
-            <ProjectCard
-              title="DroneVisioner – Frontend"
-              description="User-friendly frontend for the website of 'DroneVisioner', where you can read about and book the drone photographer in question."
-              techList={["HTML", "JavaScript", "CSS"]}
-              githubLink="https://github.com/UgbaadMohamed/DroneVisionerFrontend"
-              liveLink="http://dronevisioner.dk/"
-            />
-            <ProjectCard
-              title="KinoXP – Backend"
-              description="Cinema management system using Spring Boot. Handles movie management and stores ticket bookings with dates and seat info via ticket ID."
-              techList={["Java", "Spring Boot", "MySQL"]}
-              githubLink="https://github.com/FMIU-ONAV/KinoXP_backend"
-            />
-            <ProjectCard
-              title="KinoXP – Frontend"
-              description="JavaScript-based interface for browsing movies, booking/reserving tickets, and picking seats."
-              techList={["JavaScript", "HTML", "CSS"]}
-              githubLink="https://github.com/FMIU-ONAV/KinoXP_frontend"
-            />
-            <ProjectCard
-              title="Bilabonnement"
-              description="Full-stack car subscription platform. Includes login system and booking functionality for renting cars."
-              techList={["HTML", "Java", "CSS", "MySQL"]}
-              githubLink="https://github.com/UgbaadMohamed/Bilabonnement"
-            />
-            <ProjectCard
-              title="Make A Wish"
-              description='Wishlist app - similar concept as "Ønskeskyen". Stores wishes in a MySQL database.'
-              techList={["Java", "HTML", "CSS", "MySQL"]}
-              githubLink="https://github.com/UgbaadMohamed/MakeAWishProject"
-            />
+            <div className="projects-grid">
+              <ProjectCard
+                title="DroneVisioner – Backend"
+                description="REST API for the drone photography booking platform 'DroneVisioner'. Stores bookings with dates in the database."
+                techList={["Java", "Spring Boot", "MySQL"]}
+                githubLink="https://github.com/Munira1212/DroneVisioner_backend"
+              />
+              <ProjectCard
+                title="DroneVisioner – Frontend"
+                description="User-friendly frontend for the website of 'DroneVisioner', where you can read about and book the drone photographer in question."
+                techList={["HTML", "JavaScript", "CSS"]}
+                githubLink="https://github.com/UgbaadMohamed/DroneVisionerFrontend"
+                liveLink="http://dronevisioner.dk/"
+              />
+              <ProjectCard
+                title="KinoXP – Backend"
+                description="Cinema management system using Spring Boot. Handles movie management and stores ticket bookings with dates and seat info via ticket ID."
+                techList={["Java", "Spring Boot", "MySQL"]}
+                githubLink="https://github.com/FMIU-ONAV/KinoXP_backend"
+              />
+              <ProjectCard
+                title="KinoXP – Frontend"
+                description="JavaScript-based interface for browsing movies, booking/reserving tickets, and picking seats."
+                techList={["JavaScript", "HTML", "CSS"]}
+                githubLink="https://github.com/FMIU-ONAV/KinoXP_frontend"
+              />
+              <ProjectCard
+                title="Bilabonnement"
+                description="Full-stack car subscription platform. Includes login system and booking functionality for renting cars."
+                techList={["HTML", "Java", "CSS", "MySQL"]}
+                githubLink="https://github.com/UgbaadMohamed/Bilabonnement"
+              />
+              <ProjectCard
+                title="Make A Wish"
+                description='Wishlist app - similar concept as "Ønskeskyen". Stores wishes in a MySQL database.'
+                techList={["Java", "HTML", "CSS", "MySQL"]}
+                githubLink="https://github.com/UgbaadMohamed/MakeAWishProject"
+              />
+            </div>
           </div>
-        </div>
         )}
-
       </div>
       {hasMounted && (
-          <div
-            ref={footRef}
-            className={`${
-              hasMounted && footInView
-                ? "foot-fade-in-up"
-                : "foot-hidden-before-animate"
-            }`}
-          >
-      <Footer />
-      </div>
-        )}
+        <div
+          ref={footRef}
+          className={`${
+            hasMounted && footInView
+              ? "foot-fade-in-up"
+              : "foot-hidden-before-animate"
+          }`}
+        >
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }
