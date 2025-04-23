@@ -588,7 +588,7 @@ background-color: rgba(0, 0, 0, 0.33);
   .experience-buttons {
     display: flex;
     flex-direction: row;     /* buttons side-by-side */
-    justify-content: left;
+    justify-content: flex-start;
     gap: 2rem;
     margin-bottom: 40px;
   }
