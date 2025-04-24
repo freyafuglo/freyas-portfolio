@@ -1,5 +1,15 @@
 /* styles/globals.css */
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;550;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&display=swap");
 
 /* GLOBAL-------------------------- */
 
@@ -14,9 +24,18 @@ h2 {
 }
 
 p {
-  font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
+  font-family: "M PLUS 1p", sans-serif; /*NTR, Open sans, Chicago", "MS Sans Serif", "Tahoma*/
   font-size: 1.1rem; /* Slightly larger text */
-  line-height: 2; /* More space between lines */
+  line-height: 1.95; /* More space between lines */
+  /*font-weight: 600; /* Try 500, 600, or even 700 */
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  /*font-family: "Courier New", monospace; /*ændret*/
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Rubik", sans-serif;
 }
 
 button {
@@ -45,6 +64,14 @@ a {
 
 /* HEADER------------------------------- */
 
+.win95-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  font-family: "Rubik", sans-serif; /*font-family: "MS Sans Serif", Tahoma, sans-serif;*/
+}
+
 header {
   position: fixed;
   top: 0px;
@@ -55,18 +82,6 @@ header {
   transition: background-color 0.3s ease;
 }
 
-/* Dark mode- mega smart til custom dark mode på andre ting end 'default'!! */
-body.dark-mode header {
-  /*background-color: #0a2239;  /* darker version for dark mode */
-}
-
-.win95-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1rem;
-  font-family: "MS Sans Serif", Tahoma, sans-serif;
-}
 
 .freya-btn {
   background: none;
@@ -118,7 +133,7 @@ body.dark-mode header {
 
 .link-btns {
   /*padding-right: 30px;*/
-  margin-left: 850px;
+  margin-left: 800px;
 }
 
 .link-btns a {
@@ -193,17 +208,6 @@ body.dark-mode header {
 
 /* PORTFOLIO----------------------*/
 
-body {
-  font-family: "Courier New", monospace; /*ændret*/
-
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.header-text {
-  font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
-  font-size: 35px;
-}
-
 .bread {
   max-width: 100ch; /* Limits line length to about 80 characters */
   word-wrap: break-word; /* Ensures long words break if needed */
@@ -220,14 +224,21 @@ body {
   flex-direction: column; /* Ensure content stacks vertically */
 }
 
-
 /*INTRO------------------------------------*/
 
 #intro-sec {
-  padding-top: 75px;
+  padding-top: 45px;
   padding-bottom: 10px;
   max-width: 650px; /* this limits the width of the paragraph */
 }
+
+.header-text {
+  font-size: 35px;
+  margin-bottom: 16px; /*mindre mellemrum mellem h2*/
+  font-family: "Rubik", sans-serif;
+}
+
+
 
 /*  Animation */
 
@@ -247,31 +258,24 @@ body {
   animation: toggleSize 2s infinite steps(1); /* Slower (3s per cycle) */
 }
 
-/* tror ik de 2 bliver brugt? efter html css
-.light-mode .bread {
-  background-color: #b5daff;
-}
-
-.dark-mode .bread {
-  background-color: #0a2239;
-}*/
-
 .email-link {
   display: inline-flex;
   align-items: center;
-  font-family: "Courier New", monospace; /* Retro feel */
+  /*font-family: "Courier New", monospace; /* Retro feel */
   font-size: 20px;
-  font-weight: 700; /* thin */
+  font-weight: 600; /* thin */
 
   color: rgb(27, 118, 209);
   text-decoration: none;
   border: 2px solid rgb(27, 118, 209);
   padding: 8.5px 15px;
+  /*padding-top: 20x;*/
   border-radius: 5px;
   /*background-color: #f0f0f0;  /*background-color: #f2f4f8; #e0e0e0*/
   background-color: rgba(255, 255, 255, 0.75); /* white with 75% opacity */
 
   transition: all 0.3s ease;
+  font-family: "Rubik", sans-serif;
 }
 
 .email-link:hover {
@@ -285,7 +289,7 @@ body {
 
 .dark-mode .email-link {
   /*background-color: #061625;/*rgba(255, 255, 255, 0.9); /* white with 75% opacity */
-background-color: rgba(0, 0, 0, 0.33);
+  background-color: rgba(0, 0, 0, 0.33);
   /*background-color: rgb(27, 118, 209);
   border: 2px solid #e0e0e0;
   color: #e0e0e0;*/
@@ -330,16 +334,15 @@ background-color: rgba(0, 0, 0, 0.33);
   margin-top: 40px;
   padding: 0 1rem; /* Add horizontal padding */
   text-align: left; /* Make sure text is left-aligned */
-  font-family: "Chicago", "MS Sans Serif", "Tahoma", sans-serif;
+  font-family: "M PLUS 1p", sans-serif; /*"Chicago", "MS Sans Serif", "Tahoma"*/
   font-size: 1.1rem; /* Slightly larger text */
   line-height: 2; /* More space between lines */
+  font-family: "Rubik", sans-serif;
 }
 
 .section-title {
   margin-top: 0px;
 }
-
-
 
 /*ABOUT--------------------------------------*/
 
@@ -390,7 +393,6 @@ background-color: rgba(0, 0, 0, 0.33);
   visibility: hidden;
 }
 
-
 /*EXPERIENCE------------------------*/
 
 .experience-content {
@@ -426,7 +428,6 @@ background-color: rgba(0, 0, 0, 0.33);
   visibility: hidden;
 }
 
-
 .experience-list.is-visible li {
   opacity: 0;
   transform: translateY(10px);
@@ -446,7 +447,6 @@ background-color: rgba(0, 0, 0, 0.33);
   font-size: 16px;
   visibility: visible;
 }
-
 
 @keyframes fadeInUpExp {
   from {
@@ -481,14 +481,15 @@ background-color: rgba(0, 0, 0, 0.33);
   border-radius: 12px;
   padding: 7.5px 15px;
   margin-right: 12px;
-  font-family: "Courier New", monospace;
+  /*font-family: "Courier New", monospace;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 500;*/
   color: inherit;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1),
     -2px -2px 6px rgba(255, 255, 255, 0.6);
   transition: all 0.2s ease;
   line-height: 1.5; /* More space between lines */
+  font-family: "Rubik", sans-serif;
 }
 
 .experience-buttons button:hover {
@@ -520,7 +521,7 @@ background-color: rgba(0, 0, 0, 0.33);
   visibility: hidden;
 }
 
-/*PROJECTS*/
+/*PROJECTS-----------------------------------------*/
 
 .projects-grid {
   display: grid;
@@ -575,24 +576,26 @@ background-color: rgba(0, 0, 0, 0.33);
 
 /* LAYOUT FOR MOBILE DEVICES---------------------------*/
 
-
-
 @media (max-width: 768px) {
-
+  
+  #intro-sec {
+    padding-top: 0px;
+  }
+  
   .about-image {
     display: none; /* ✅ hide image on mobile */
   }
 
   .experience-content {
     flex-direction: column; /* stack vertically */
-    align-items: left;    /* center all content */
+    align-items: left; /* center all content */
     gap: 2rem;
     display: block;
   }
 
   .experience-buttons {
     /*display: flex;*/
-    flex-direction: row;     /* buttons side-by-side */
+    flex-direction: row; /* buttons side-by-side */
     justify-content: flex-start;
     gap: 1.5rem;
     margin-bottom: 40px;
@@ -605,7 +608,6 @@ background-color: rgba(0, 0, 0, 0.33);
     cursor: pointer;
     width: auto;
     /*min-width: 3rem; /* optional: keeps a minimum width */
-
   }
 
   .experience-buttons button::before {
@@ -618,5 +620,3 @@ background-color: rgba(0, 0, 0, 0.33);
     font-weight: bold;
   }
 }
-
-

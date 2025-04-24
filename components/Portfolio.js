@@ -80,7 +80,7 @@ export default function Portfolio() {
           src="/computer.PNG" // The image is accessed as if it's at the root. ændrede til PNG i caps lock fordi vercel er case sensitive
           alt="A cool computer"
           width={280} // Specify the width (in pixels)
-          height={275} // Specify the height (in pixels)
+          height={280} // Specify the height (in pixels) 5 mindre evt.
           className="animated-image"
           priority
         />)}
