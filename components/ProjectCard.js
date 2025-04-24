@@ -20,7 +20,7 @@ const ProjectCard = ({
     <div
       ref={ref}
       className={`${styles.projectCard} ${inView ? styles.fadeIn : ""}`}
-      style={{ animationDelay: `${index * 0.12}s` }}
+      style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className={styles.cardHeader}>
         <FaFolder className={styles.folderIcon} />

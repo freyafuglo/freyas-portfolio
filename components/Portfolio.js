@@ -29,7 +29,7 @@ export default function Portfolio() {
   });
   const { ref: projRef, inView: projInView } = useInView({
     triggerOnce: true,
-    threshold: 0.25,
+    threshold: 0.15,
   });
   const { ref: footRef, inView: footInView } = useInView({
     triggerOnce: true,

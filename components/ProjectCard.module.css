@@ -15,7 +15,7 @@
   animation-play-state: paused;
 }
 
-/* This class triggers it */
+/* This class triggers it -- hmm sjovt hvordan de kan være 'forbundede'?? */
 .fadeIn {
   animation-play-state: running;
 }
