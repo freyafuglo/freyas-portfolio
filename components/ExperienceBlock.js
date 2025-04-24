@@ -19,7 +19,7 @@ const ExperienceBlock = ({ role, workPlace, period, tasks }) => {
 
       <ul ref={ref} className={`experience-list ${inView ? "is-visible" : ""}`}>
         {tasks.map((item, index) => (
-          <li key={index} style={{ "--li-delay": `${index * 0.1}s` }}>
+          <li key={index} style={{ "--li-delay": `${index * 0.15}s` }}>
             {item}
           </li>
         ))}

@@ -35,6 +35,51 @@ export default function Portfolio() {
     triggerOnce: true,
     threshold: 0.15,
   });
+  const projectList = [
+    {
+      title: "DroneVisioner – Backend",
+      description:
+        "REST API for the drone photography booking platform 'DroneVisioner'. Stores bookings with dates in the database.",
+      techList: ["Java", "Spring Boot", "MySQL"],
+      githubLink: "https://github.com/Munira1212/DroneVisioner_backend",
+    },
+    {
+      title: "DroneVisioner – Frontend",
+      description:
+        "User-friendly frontend for the website of 'DroneVisioner', where you can read about and book the drone photographer in question.",
+      techList: ["HTML", "JavaScript", "CSS"],
+      githubLink: "https://github.com/UgbaadMohamed/DroneVisionerFrontend",
+      liveLink: "http://dronevisioner.dk/",
+    },
+    {
+      title: "KinoXP – Backend",
+      description:
+        "Cinema management system using Spring Boot. Handles movie management and stores ticket bookings with dates and seat info via ticket ID.",
+      techList: ["Java", "Spring Boot", "MySQL"],
+      githubLink: "https://github.com/FMIU-ONAV/KinoXP_backend",
+    },
+    {
+      title: "KinoXP – Frontend",
+      description:
+        "JavaScript-based interface for browsing movies, booking/reserving tickets, and picking seats.",
+      techList: ["JavaScript", "HTML", "CSS"],
+      githubLink: "https://github.com/FMIU-ONAV/KinoXP_frontend",
+    },
+    {
+      title: "Bilabonnement",
+      description:
+        "Full-stack car subscription platform. Includes login system and booking functionality for renting cars.",
+      techList: ["HTML", "Java", "CSS", "MySQL"],
+      githubLink: "https://github.com/UgbaadMohamed/Bilabonnement",
+    },
+    {
+      title: "Make A Wish",
+      description:
+        'Wishlist app - similar concept as "Ønskeskyen". Stores wishes in a MySQL database.',
+      techList: ["Java", "HTML", "CSS", "MySQL"],
+      githubLink: "https://github.com/UgbaadMohamed/MakeAWishProject",
+    },
+  ]; //more scalable way of adding proj cards, w/o having to repeat animationDelay
 
   useEffect(() => {
     setHasMounted(true);
@@ -75,15 +120,16 @@ export default function Portfolio() {
   return (
     <div className="bread">
       <div id="intro-sec">
-      {hasMounted && (
-        <Image
-          src="/computer.PNG" // The image is accessed as if it's at the root. ændrede til PNG i caps lock fordi vercel er case sensitive
-          alt="A cool computer"
-          width={280} // Specify the width (in pixels)
-          height={280} // Specify the height (in pixels) 5 mindre evt.
-          className="animated-image"
-          priority
-        />)}
+        {hasMounted && (
+          <Image
+            src="/computer.PNG" // The image is accessed as if it's at the root. ændrede til PNG i caps lock fordi vercel er case sensitive
+            alt="A cool computer"
+            width={280} // Specify the width (in pixels)
+            height={280} // Specify the height (in pixels) 5 mindre evt.
+            className="animated-image"
+            priority
+          />
+        )}
         <h1 className="header-text">{typedText}</h1>
         {hasMounted && (
           <div
@@ -166,13 +212,20 @@ export default function Portfolio() {
                     inView ? "is-visible" : ""
                   }`}
                 >
-                  <li>React</li>
-                  <li>Next.js</li>
-                  <li>Node.js</li>
-                  <li>PostgreSQL</li>
-                  <li>Java</li>
-                  <li>Python</li>
+                  {[
+                    "React",
+                    "Next.js",
+                    "Node.js",
+                    "PostgreSQL",
+                    "Java",
+                    "Python",
+                  ].map((tech, index) => (
+                    <li key={tech} style={{ "--li-delay": `${index * 0.15}s` }}>
+                      {tech}
+                    </li>
+                  ))}
                 </ul>
+
                 <p>
                   In my free time, I love learning about philosophical theories,
                   keeping up with scientific developments, and spending time in
@@ -282,47 +335,19 @@ export default function Portfolio() {
             <h1 className="section-title">╰┈➤ projects</h1>
 
             <div className="projects-grid">
-              <ProjectCard
-                title="DroneVisioner – Backend"
-                description="REST API for the drone photography booking platform 'DroneVisioner'. Stores bookings with dates in the database."
-                techList={["Java", "Spring Boot", "MySQL"]}
-                githubLink="https://github.com/Munira1212/DroneVisioner_backend"
-              />
-              <ProjectCard
-                title="DroneVisioner – Frontend"
-                description="User-friendly frontend for the website of 'DroneVisioner', where you can read about and book the drone photographer in question."
-                techList={["HTML", "JavaScript", "CSS"]}
-                githubLink="https://github.com/UgbaadMohamed/DroneVisionerFrontend"
-                liveLink="http://dronevisioner.dk/"
-              />
-              <ProjectCard
-                title="KinoXP – Backend"
-                description="Cinema management system using Spring Boot. Handles movie management and stores ticket bookings with dates and seat info via ticket ID."
-                techList={["Java", "Spring Boot", "MySQL"]}
-                githubLink="https://github.com/FMIU-ONAV/KinoXP_backend"
-              />
-              <ProjectCard
-                title="KinoXP – Frontend"
-                description="JavaScript-based interface for browsing movies, booking/reserving tickets, and picking seats."
-                techList={["JavaScript", "HTML", "CSS"]}
-                githubLink="https://github.com/FMIU-ONAV/KinoXP_frontend"
-              />
-              <ProjectCard
-                title="Bilabonnement"
-                description="Full-stack car subscription platform. Includes login system and booking functionality for renting cars."
-                techList={["HTML", "Java", "CSS", "MySQL"]}
-                githubLink="https://github.com/UgbaadMohamed/Bilabonnement"
-              />
-              <ProjectCard
-                title="Make A Wish"
-                description='Wishlist app - similar concept as "Ønskeskyen". Stores wishes in a MySQL database.'
-                techList={["Java", "HTML", "CSS", "MySQL"]}
-                githubLink="https://github.com/UgbaadMohamed/MakeAWishProject"
-              />
+              {projectList.map((project, index) => (
+                <ProjectCard
+                  key={project.title}
+                  index={index}
+                  triggerAnimation={projInView}
+                  {...project}
+                />
+              ))}
             </div>
           </div>
         )}
       </div>
+
       {hasMounted && (
         <div
           ref={footRef}

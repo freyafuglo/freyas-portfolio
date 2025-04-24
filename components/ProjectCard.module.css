@@ -1,13 +1,36 @@
 .projectCard {
-  background: rgba(255, 255, 255, 0.2); /*background: #f9f9fb; OR #f2f4f8;*/
+  background: rgba(255, 255, 255, 0.2);
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
   display: flex;
   flex-direction: column;
-  gap: 0rem; /*evt 0.5*/
+  gap: 0rem;
+
+  /* prepare for animation but don't trigger yet */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInCard 1.5s ease-out forwards;
+  animation-play-state: paused;
 }
+
+/* This class triggers it */
+.fadeIn {
+  animation-play-state: running;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0; /* Start with a lower opacity */
+    transform: translateY(75px); /* Start further down */
+  }
+  to {
+    opacity: 1; /* Final opacity */
+    transform: translateY(0); /* Move up to original position */
+  }
+}
+
 
 .projectCard:hover {
   transform: translateY(-4px);
