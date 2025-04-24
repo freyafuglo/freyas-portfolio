@@ -233,7 +233,7 @@ header {
 }
 
 .header-text {
-  font-size: 35px;
+  font-size: 37px;
   margin-bottom: 16px; /*mindre mellemrum mellem h2*/
   font-family: "Rubik", sans-serif;
 }
@@ -342,6 +342,7 @@ header {
 
 .section-title {
   margin-top: 0px;
+  font-size: xx-large;
 }
 
 /*ABOUT--------------------------------------*/
@@ -436,6 +437,9 @@ header {
   margin-bottom: 0.75rem; /* or 1rem if you want more space */
   font-size: 16px;
   visibility: visible;
+  position: relative;
+  padding-left: 1.5rem; /* enough space for the ☆ + gap */
+  text-indent: -1.5rem; /* pull the first line back */
 }
 
 .experience-list.is-visible li {
@@ -446,6 +450,9 @@ header {
   margin-bottom: 0.75rem; /* or 1rem if you want more space */
   font-size: 16px;
   visibility: visible;
+  position: relative;
+  padding-left: 1.5rem; /* enough space for the ☆ + gap */
+  text-indent: -1.6rem; /* pull the first line back */
 }
 
 @keyframes fadeInUpExp {
@@ -481,9 +488,9 @@ header {
   border-radius: 12px;
   padding: 7.5px 15px;
   margin-right: 12px;
-  /*font-family: "Courier New", monospace;
-  font-size: 15px;
-  font-weight: 500;*/
+  /*font-family: "Courier New", monospace;*/
+  font-size: 14px;
+  font-weight: 400;
   color: inherit;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1),
     -2px -2px 6px rgba(255, 255, 255, 0.6);
