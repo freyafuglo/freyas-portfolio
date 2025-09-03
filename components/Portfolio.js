@@ -143,12 +143,11 @@ export default function Portfolio() {
             <h2>Welcome to my portfolio page.</h2>
 
             <p>
-              I'm a software engineer from Copenhagen, Denmark. I have a passion
-              for building thoughtful, user-centered systems. I've contributed
-              to innovative health tech products, developed tailored digital
+              I'm a software engineer from Copenhagen, Denmark. I'm passionate
+              about building thoughtful, user-centered systems and have
+              contributed to innovative health tech products, developed digital
               solutions for small businesses and supported feature launches in
-              industry-leading entertainment platforms reaching millions
-              worldwide.
+              entertainment platforms reaching millions.
             </p>
 
             <a href="mailto:freya.fuglo@gmail.com" className="email-link">
