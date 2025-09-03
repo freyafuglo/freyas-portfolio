@@ -583,7 +583,7 @@ header {
 
 /* LAYOUT FOR MOBILE DEVICES---------------------------*/
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   
   #intro-sec {
     padding-top: 0px;
@@ -604,7 +604,7 @@ header {
     /*display: flex;*/
     flex-direction: row; /* buttons side-by-side */
     justify-content: flex-start;
-    gap: 1.5rem;
+    gap: 0.25rem;
     margin-bottom: 40px;
   }
 
