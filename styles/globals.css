@@ -51,6 +51,10 @@ a {
   text-decoration: none;
 }
 
+.blue-text:active {
+  color: #551a8b; /* purple when clicked/active */
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0; /* Start with a lower opacity */
@@ -81,7 +85,6 @@ header {
   backdrop-filter: blur(8px); /* gives it a frosted glass effect */
   transition: background-color 0.3s ease;
 }
-
 
 .freya-btn {
   background: none;
@@ -237,8 +240,6 @@ header {
   margin-bottom: 16px; /*mindre mellemrum mellem h2*/
   font-family: "Rubik", sans-serif;
 }
-
-
 
 /*  Animation */
 
@@ -583,11 +584,10 @@ header {
 /* LAYOUT FOR MOBILE DEVICES---------------------------*/
 
 @media (max-width: 768px) {
-  
   #intro-sec {
     padding-top: 0px;
   }
-  
+
   .about-image {
     display: none; /* ✅ hide image on mobile */
   }
@@ -626,6 +626,3 @@ header {
     font-weight: bold;
   }
 }
-
-
-
