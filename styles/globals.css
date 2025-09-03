@@ -367,7 +367,6 @@ header {
 }
 
 .me {
-  filter: grayscale(35%);
   transition: filter 0.3s ease;
   border-radius: 10px;
 }

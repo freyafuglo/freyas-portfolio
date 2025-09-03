@@ -238,10 +238,10 @@ export default function Portfolio() {
 
               <div className="about-image">
                 <Image
-                  src="/Freya_Portræt.png"
+                  src="/FREYA.png"
                   alt="Me"
-                  width={225}
-                  height={291}
+                  width={300}
+                  height={Math.round(300 / 0.927)} // auto-calculate height
                   className="me"
                 />
               </div>
