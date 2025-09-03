@@ -10,7 +10,7 @@ export default function Portfolio() {
   const fullText = "hi there! i'm freya.";
   const [typedText, setTypedText] = useState("");
   const [hasMounted, setHasMounted] = useState(false);
-  const [selectedExperience, setSelectedExperience] = useState("DemensAI");
+  const [selectedExperience, setSelectedExperience] = useState("BLAST");
   const { ref: introRef, inView: introInView } = useInView({
     triggerOnce: true,
     //threshold: 0.15,
