@@ -284,7 +284,11 @@ export default function Portfolio() {
                   role="Fullstack Software Engineer Intern"
                   workPlace="BLAST"
                   period="Aug 2025 – Present"
-                  tasks={[""]}
+                  tasks={[
+                    "Contribute to the development and improvement of systems and platforms, primarily using TypeScript, Node.js, React, Remix, Tailwind, and shadcn.",
+                    "Test and implement new features in collaboration with the product team.",
+                    "Explore and experiment with new technologies relevant to projects. Work within a structured setup with ongoing guidance and feedback.",
+                  ]}
                 />
               )}
 
