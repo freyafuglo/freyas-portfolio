@@ -1,8 +1,6 @@
 "use client"; // Add this line to make this file a Client Component
 
 import Portfolio from "../components/Portfolio";
-import { useState, useEffect } from "react";
-import Head from "next/head";
 
 //seo
 

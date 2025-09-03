@@ -263,18 +263,30 @@ export default function Portfolio() {
             <h1 className="section-title">╰┈➤ experience</h1>
             <div className="experience-content">
               <div className="experience-buttons">
+                <button onClick={() => setSelectedExperience("BLAST")}>
+                  {isMobile ? "00." : "BLAST"}
+                </button>
                 <button onClick={() => setSelectedExperience("DemensAI")}>
-                  {isMobile ? "00." : "DemensAI"}
+                  {isMobile ? "01." : "DemensAI"}
                 </button>
                 <button onClick={() => setSelectedExperience("KEA")}>
                   {isMobile
-                    ? "01."
+                    ? "02."
                     : "Copenhagen School of Design and Technology"}
                 </button>
                 <button onClick={() => setSelectedExperience("DroneVisioner")}>
-                  {isMobile ? "02." : "DroneVisioner"}
+                  {isMobile ? "03." : "DroneVisioner"}
                 </button>
               </div>
+
+              {selectedExperience === "BLAST" && (
+                <ExperienceBlock
+                  role="Fullstack Software Engineer Intern"
+                  workPlace="BLAST"
+                  period="Aug 2025 – Present"
+                  tasks={[""]}
+                />
+              )}
 
               {selectedExperience === "DemensAI" && (
                 <ExperienceBlock
