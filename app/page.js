@@ -6,25 +6,22 @@ import Head from "next/head";
 
 //seo
 
+export const metadata = {
+  title: "Freya Fuglø | Portfolio",
+  description: "Portfolio of Freya Fuglø, software engineer from Copenhagen.",
+  keywords: [
+    "Freya Fuglø",
+    "software developer",
+    "portfolio",
+    "projects",
+    "Copenhagen",
+  ],
+};
+
 export default function HomePage() {
   return (
-    <div>
-      <Head>
-        <title>Freya Fuglø | Portfolio</title>
-        <meta
-          name="description"
-          content="Portfolio of Freya Fuglø, software engineer from Copenhagen."
-        />
-        <meta
-          name="keywords"
-          content="Freya Fuglø, software developer, portfolio, projects, Copenhagen"
-        />
-      </Head>
-
-      <main>
-        <Portfolio />
-      </main>
-
-    </div>
+    <main>
+      <Portfolio />
+    </main>
   );
 }
