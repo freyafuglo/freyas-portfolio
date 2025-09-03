@@ -308,7 +308,7 @@ export default function Portfolio() {
 
               {selectedExperience === "KEA" && (
                 <ExperienceBlock
-                  role="Tutor"
+                  role="Technical Tutor"
                   workPlace="Copenhagen School of Design and Technology"
                   period="AUG 2023
               – JAN 2024"
