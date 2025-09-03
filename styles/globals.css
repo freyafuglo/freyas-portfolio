@@ -583,7 +583,7 @@ header {
 
 /* LAYOUT FOR MOBILE DEVICES---------------------------*/
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   
   #intro-sec {
     padding-top: 0px;
